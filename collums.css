@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  padding: 14px;
+  height: 1000px;
+}
+
+.leftShop {
+  width: 75%;
+}
+
+.rightShop {
+  width: 25%;
+}
+
+.leftProfile {
+  width: 60%;
+}
+
+.rightProfile {
+  width: 40%;
+}
+
+.leftGame {
+  width: 85%;
+}
+
+.rightGame {
+  width: 15%;
+}
+
+.leftLogin {
+  width: 40%;
+}
+
+.rightLogin {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,12 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color:#425eb4;
+}
+*{
+    margin: 0 auto 0 auto;
+}
