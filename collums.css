@@ -11,37 +11,46 @@
 
 .leftShop {
   width: 75%;
+ 
 }
 
 .rightShop {
   width: 25%;
+  background-color:#bbb;
 }
 
 .leftProfile {
   width: 60%;
+  
 }
 
 .rightProfile {
   width: 40%;
+  background-color:#bbb;
 }
 
 .leftGame {
+  
   width: 85%;
 }
 
 .rightGame {
   width: 15%;
+  background-color:#bbb;
+  
 }
 
 .leftLogin {
   width: 40%;
+  
 }
 
 .rightLogin {
   width: 60%;
+  background-color:#bbb;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
