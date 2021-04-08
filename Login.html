@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="collums.css">
 <link rel="stylesheet" href="document.css">
-
+<link rel="stylesheet" href="login.css">
 <head>
 <title>Superhero's Quiz</title>
 </head>
@@ -10,12 +10,53 @@
 <body>
 <div class="row">
   <div class="column leftLogin" >
-    <h2>Login</h2>
-    <p>Some text..</p>
+  	<div class="loginPadding">
+    <form action="Profile.html" method="post">
+  <div class="imgcontainer">
+    <img src="avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+</div>
+  
+</form>
   </div>
   <div class="column rightLogin" >
-    <h2>Register</h2>
-    <p>Some text..</p>
+   <form action="Login.html" method="post">
+  <div class="imgcontainer">
+    <img src="register.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="uname"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw"><b>Retype password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Register</button>
+    
+  </div>
+
+  
+</form>
   </div>
 </div>
 

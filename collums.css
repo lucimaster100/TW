@@ -41,14 +41,19 @@
 }
 
 .leftLogin {
-  width: 40%;
+  width: 50%;
+  text-align:center;
+  background-color:orange;
+ 
+}
+.rightLogin {
+  width: 50%;
+text-align:center;
+background-color:grey;
   
 }
 
-.rightLogin {
-  width: 60%;
-  background-color:#bbb;
-}
+
 
 
 .row:after {
