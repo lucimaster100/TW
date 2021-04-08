@@ -6,50 +6,63 @@
 .column {
   float: left;
   padding: 14px;
-  height: 1000px;
+  height: 900px;
 }
 
 .leftShop {
-  width: 75%;
+  width: 85%;
+    text-align:center;
+
  
 }
 
 .rightShop {
-  width: 25%;
-  background-color:#bbb;
+  width: 15%;
+    text-align:center;
+
 }
 
 .leftProfile {
-  width: 60%;
-  
+  width: 85%;
+    text-align:center;
+
 }
 
 .rightProfile {
-  width: 40%;
-  background-color:#bbb;
+  width: 15%;
+    text-align:center;
+
 }
 
 .leftGame {
   
   width: 85%;
+    text-align:center;
+
+
 }
 
 .rightGame {
   width: 15%;
-  background-color:#bbb;
+    text-align:center;
+
+
+  
   
 }
 
 .leftLogin {
   width: 50%;
   text-align:center;
-  background-color:orange;
+   border-right: 1px solid #EDEDEE; 
+  
  
 }
 .rightLogin {
   width: 50%;
-text-align:center;
-background-color:grey;
+
+  text-align:center;
+
   
 }
 
