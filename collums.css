@@ -12,6 +12,7 @@
 .leftShop {
   width: 85%;
     text-align:center;
+    overflow: hidden;
 
  
 }
@@ -19,6 +20,7 @@
 .rightShop {
   width: 15%;
     text-align:center;
+    overflow: hidden;
 
 }
 
