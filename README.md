@@ -49,6 +49,7 @@
             <span>2.1</span>
             Functionalitati
             </h3>
-            <h4>Login</h4>
+            <h4>Login/Register</h4>
+            <p>Memorarea datelor despre utilizator intr-o baza de date si verificarea acestor date in cadrul sesiunii de logare</p>
 </body>
 </html>
