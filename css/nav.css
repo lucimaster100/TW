@@ -20,10 +20,10 @@
     
     color: black;
    
-    border-right: 1px solid yellow; 
-    border-left: 1px solid blue;
-    border-bottom: 1px solid red;
-    border-top: 1px solid green; 
+    border-right: 3px solid yellow; 
+    border-left: 3px solid blue;
+    border-bottom: 3px solid red;
+    border-top: 3px solid green; 
     }
 #nav li a:hover {
     color: yellow;
