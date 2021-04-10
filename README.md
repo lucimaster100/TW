@@ -72,5 +72,28 @@
             Constrangeri de implementare
             </h3>
             <p>Informatii limitate despre super-eroi, constrangeri legate de copyright, mentenanta serverului si hostarea acestuia.</p>
+            <h3>
+            <span>2.5</span>
+            Interactiunea cu utilizatorul
+            </h3>
+            <p>Utilizatorul va avea de ales intre 3 dificultati : EASY, NORMAL, HARD. Pe baza dificultatii alese cerinta de a castiga este diferita, dar si punctajul difera. Fiecare dificultate va avea 15 inrebari. In functie de dificultate utilizatorul poate gresi una sau mai multe intrebari (EASY-5, NORMAL-3, HARD-1). In functie de numarul de intrebari corecte si de dificultate, utilizatorul va primi un numar de puncte pe care le poate folosi in Magazin.<p>
+            <span>3.</span>
+            Tehnologii utilizate
+            </h2>
+            <h3>
+            <span>3.1</span>
+            Frontend
+            </h3>
+            <p>Sunt utilizate limbajele: HTML5(pentru crearea paginii propriu-zise) si CSS(pentru stilizarea paginii). </p>
+            <h3>
+            <span>3.2</span>
+            Backend
+            </h3>
+            <p>Pentru implementarea backend-ului este folosit limbajul JavaScript. </p>
+            <h3>
+            <span>3.3</span>
+            Baze de date
+            </h3>
+            <p>Pentru implementarea bazei de date se foloseste SQL.</p>
 </body>
 </html>
