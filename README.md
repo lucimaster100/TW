@@ -43,7 +43,6 @@
             <a href="https://www.geeksforgeeks.org/how-to-make-elements-float-to-center/">GeeksForGeeks</a>
             <a href="https://w3c.github.io/scholarly-html/">Scholarly-HTML</a>
             <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">TW-Courses</a>
-
         </section>
         <section>
         </section>
