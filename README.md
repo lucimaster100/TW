@@ -51,5 +51,7 @@
             </h3>
             <h4>Login/Register</h4>
             <p>Memorarea datelor despre utilizator intr-o baza de date si verificarea acestor date in cadrul sesiunii de logare</p>
+            <h4>Fereastra de joc</h4>
+            <p></p>
 </body>
 </html>
