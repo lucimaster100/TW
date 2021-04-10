@@ -17,6 +17,10 @@
                 <li>Croitor Robert Constantin</li>
             </ul>
             </section>
+            <section>
+            <h3>Introduction</h3>
+            <p>awdabsfdeadd</p>
+            </section>
         </div>
         </header>
       </article>
