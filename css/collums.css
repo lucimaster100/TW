@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  padding: 14px;
+  height: 900px;
+}
+
+.leftShop {
+  width: 85%;
+    text-align:center;
+    overflow: hidden;
+
+ 
+}
+
+.rightShop {
+  width: 15%;
+    text-align:center;
+    overflow: hidden;
+
+}
+
+.leftProfile {
+  width: 70%;
+    text-align:center;
+
+}
+
+.rightProfile {
+  width: 30%;
+    text-align:center;
+
+}
+
+.leftGame {
+  
+  width: 85%;
+    text-align:center;
+
+
+}
+
+.gameWindow{
+  background-image: url('../photos/maintenance.jpg');
+
+  width: 65%;
+  height: 600px;
+  margin-top: 5%;
+  margin-left: 17%;
+  text-align: center;
+
+}
+
+.rightGame {
+  width: 15%;
+    text-align:center;
+
+
+  
+  
+}
+
+.leftLogin {
+  width: 50%;
+  text-align:center;
+   border-right: 1px solid #EDEDEE; 
+  
+ 
+}
+.rightLogin {
+  width: 50%;
+
+  text-align:center;
+
+  
+}
+
+
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

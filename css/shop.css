@@ -1,4 +1,8 @@
-
+label{
+  color:black;
+  font-weight:bold;
+  font-size: 16px;
+}
 #card {
     display: block;
     border-radius: 10px;
@@ -6,8 +10,8 @@
     text-decoration: none;
     font-weight: bold;
     text-align:center;
-    background-color: #4489c9;
-    color: #e9e8e8;
+    background-color: transparent;
+    color: blue ;
     border-right: 1px solid grey; 
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -23,12 +27,12 @@
     text-decoration: none;
     font-weight: bold;
     text-align: right;
-    background-color: #44c944;
-    color: #e9e8e8;
-    border-right: 1px solid grey; 
-    border-left: 1px solid grey;
-    border-bottom: 1px solid grey;
-    border-top: 1px solid grey;
+    background-color: transparent;
+    color: red;
+    border-right: 1px solid yellow; 
+    border-left: 1px solid blue;
+    border-bottom: 1px solid red;
+    border-top: 1px solid green; 
   }
   #card button:hover{
     color: yellow;
