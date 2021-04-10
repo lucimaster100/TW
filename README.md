@@ -71,6 +71,6 @@
             <span>2.4</span>
             Constrangeri de implementare
             </h3>
-            <p></p>
+            <p>Informatii limitate despre super-eroi, constrangeri legate de copyright, mentenanta serverului si hostarea acestuia.</p>
 </body>
 </html>
