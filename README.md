@@ -52,6 +52,25 @@
             <h4>Login/Register</h4>
             <p>Memorarea datelor despre utilizator intr-o baza de date si verificarea acestor date in cadrul sesiunii de logare</p>
             <h4>Fereastra de joc</h4>
+            <p>Fereastra in care se afla jocul propriu-zis si inventarul utilizatorului in care se afla diferite ustensile in cadrul jocului</p>
+            <h4>Magazin</h4>
+            <p>Fereastra de unde utilizatorul poate cumpara diferite ustensile ce il vor ajuta in cadrul jocului</p>
+            <h4>Profil</h4>
+            <p>Fereastra ce contine diferite detalii despre utilizator precum si sectiunea de setari</p>
+            <h3>
+            <span>2.2</span>
+            Clase de utilizatori
+            </h3>
+            <p>Utilizatori ce doresc sa isi testeze cunostintele despre super-eroi din filme si benzi desenate</p>
+            <h3>
+            <span>2.3</span>
+            Mediul de operare
+            </h3>
+            <p>Orice sistem de operare/browser web ce suporta HTML5,javascript</p>
+            <h3>
+            <span>2.4</span>
+            Constrangeri de implementare
+            </h3>
             <p></p>
 </body>
 </html>
