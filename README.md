@@ -7,7 +7,7 @@
 <body>
       <article>
         <header>
-        <h1>SUH</h1>
+        <h1>SuH(SuperHeroes Web Game)</h1>
         </header>
       </article>
 </body>
