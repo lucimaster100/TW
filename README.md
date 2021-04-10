@@ -17,7 +17,6 @@
                 <li>Croitor Robert Constantin</li>
             </ul>   
         </div>
-        <section>
             <h2>
             <span>1.</span>
             Introducere
@@ -43,8 +42,5 @@
             <a href="https://www.geeksforgeeks.org/how-to-make-elements-float-to-center/">GeeksForGeeks</a><br>
             <a href="https://w3c.github.io/scholarly-html/">Scholarly-HTML</a><br>
             <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">TW-Courses</a><br>
-        </section>
-        <section>
-        </section>
 </body>
 </html>
