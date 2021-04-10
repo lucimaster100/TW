@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SuH(SuperHeroes Web Game)</title>
     <meta charset="utf-8">
 </head>
     
@@ -42,5 +41,14 @@
             <a href="https://www.geeksforgeeks.org/how-to-make-elements-float-to-center/">GeeksForGeeks</a><br>
             <a href="https://w3c.github.io/scholarly-html/">Scholarly-HTML</a><br>
             <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">TW-Courses</a><br>
+            <h2>
+            <span>2.</span>
+            Descriere
+            </h2>
+            <h3>
+            <span>2.1</span>
+            Functionalitati
+            </h3>
+            <h4>Login</h4>
 </body>
 </html>
