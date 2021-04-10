@@ -37,12 +37,12 @@
             <span>1.3</span>
             Referinte
             </h3>
-            <a href="https://www.w3schools.com">W3schools</a>
-            <a href="https://www.javatpoint.com/html-tutorial">Javapoint</a>
-            <a href="https://github.com/rick4470/IEEE-SRS-Tempate">IEEE-SRS-Tempate</a>
-            <a href="https://www.geeksforgeeks.org/how-to-make-elements-float-to-center/">GeeksForGeeks</a>
-            <a href="https://w3c.github.io/scholarly-html/">Scholarly-HTML</a>
-            <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">TW-Courses</a>
+            <a href="https://www.w3schools.com">W3schools</a><br>
+            <a href="https://www.javatpoint.com/html-tutorial">Javapoint</a><br>
+            <a href="https://github.com/rick4470/IEEE-SRS-Tempate">IEEE-SRS-Tempate</a><br>
+            <a href="https://www.geeksforgeeks.org/how-to-make-elements-float-to-center/">GeeksForGeeks</a><br>
+            <a href="https://w3c.github.io/scholarly-html/">Scholarly-HTML</a><br>
+            <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/">TW-Courses</a><br>
         </section>
         <section>
         </section>
