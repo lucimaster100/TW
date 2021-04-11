@@ -12,8 +12,8 @@
             <section typeof="sa:AuthorsList">
             <h2>Autori</h2>
             <ul>
-                <li>Todica Lucian</li>
-                <li>Croitor Robert Constantin</li>
+                <li>Todica Lucian -pagini, coloane,profil,stilizare</li>
+                <li>Croitor Robert Constantin- shop,game,inventar,stilizare</li>
             </ul>   
         </div>
             <h2>
