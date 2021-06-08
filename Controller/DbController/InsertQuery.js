@@ -10,7 +10,7 @@ const pool =new Pool({
 })
 
 pool.query(
-    "INSERT INTO users(id, name, pass)VALUES(1, 'user1', 'user1')",
+    "INSERT INTO users(id, name, pass,email)VALUES(1, 'user1', 'user1','user@user.com')",
     (err, res) => {
         console.log(err, res);
         pool.end();

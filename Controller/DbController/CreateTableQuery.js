@@ -23,7 +23,7 @@ pool.query("CREATE TABLE DC(page_id VARCHAR(100), name VARCHAR(100),urlslug VARC
 })
 
 
-pool.query("CREATE TABLE Users(ID INT, name VARCHAR(100),pass VARCHAR(100))",(err,rss)=> {
+pool.query("CREATE TABLE Users(ID INT, name VARCHAR(100),pass VARCHAR(100),email VARCHAR(100))",(err,rss)=> {
     console.log(err, rss)
     pool.end()
 })
