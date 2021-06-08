@@ -45,7 +45,7 @@
 }
 
 .gameWindow{
-  background-image: url('../photos/maintenance.jpg');
+  background-image: url('../../photos/maintenance.jpg');
 
   width: 65%;
   height: 600px;

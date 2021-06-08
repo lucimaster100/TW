@@ -1,7 +1,13 @@
-label{
+.label{
   color:black;
   font-weight:bold;
   font-size: 16px;
+}
+.balance{
+    color:black;
+    font-weight:bold;
+    font-size: 16px;
+    margin-left: 5%;
 }
 .card {
     display: block;
@@ -17,7 +23,7 @@ label{
     border-bottom: 1px solid grey;
     border-top: 1px solid grey;
 }
-#price{
+.price{
     color: grey;
 }
 .card  button {

@@ -9,14 +9,14 @@ label{
     border-radius: 20%;
 }
 .container {
-  padding: 16px;
+  padding: 6px;
   margin-top: 20px;
   border-right: 5px solid yellow; 
     border-left: 5px solid blue;
     border-bottom: 5px solid red;
     border-top: 5px solid green; 
     border-radius: 10%;
-  width: 40%;
+  width: 70%;
   height: auto;
 }
 
@@ -30,8 +30,10 @@ label{
 }
 #item li button{
     display: block;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    padding: 8px 17px;
+    padding: 8px 12px;
     text-decoration: none;
     font-weight: bold;
     text-align:center;
