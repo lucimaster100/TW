@@ -1,9 +1,9 @@
+/*
 var pgtools = require("pgtools");
 const config = {
     user: "postgres",
     host: "localhost",
     password: "postgres",
-    database:"Hero",
     port: 5432
 };
 
@@ -14,3 +14,4 @@ pgtools.createdb(config, "Hero", function(err, res) {
     }
     console.log(res);
 });
+*/
