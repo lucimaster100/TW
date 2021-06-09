@@ -9,25 +9,15 @@ const server =http.createServer((req,res)=>{
     let path= './views/';
     switch(req.url){
         case '/':
-            path +='Login.html';
+            path +='index.html' +
+                '';
             res.statusCode=200;
             break;
-        case '/Login.html' :
-            path +='Login.html';
+        case '/game.html':
+            path +='game.html';
             res.statusCode=200;
             break;
-        case '/Game.html':
-            path +='Game.html';
-            res.statusCode=200;
-            break;
-        case '/Profile.html':
-            path +='Profile.html';
-            res.statusCode=200;
-            break;
-        case '/Shop.html':
-            path +='Shop.html';
-            res.statusCode=200;
-            break;
+
         default:
             path += '404.html';
             res.statusCode=404;
