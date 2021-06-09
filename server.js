@@ -1,38 +1,49 @@
 const http= require('http');
 const fs = require('fs');
+var path = require('path');
 
-const server =http.createServer((req,res)=>{
-    console.log(req.url, req.method);
+function send404(response){
+    response.writeHead(404, {'Content-Type': 'text/plain'});
+    response.write('Error 404: Resource not found.');
+    response.end();
+}
+const mimeLookup = {
+    '.js': 'application/javascript',
+    '.html': 'text/html',
+    '.css':'text/css'
+};
 
-    res.setHeader('Content-Type','text/html');
+const server = http.createServer((req, res) => {
+    if(req.method == 'GET'){
 
-    let path= './views/';
-    switch(req.url){
-        case '/':
-            path +='index.html' +
-                '';
-            res.statusCode=200;
-            break;
-        case '/game.html':
-            path +='game.html';
-            res.statusCode=200;
-            break;
-
-        default:
-            path += '404.html';
-            res.statusCode=404;
-            break;
-    }
-
-    fs.readFile(path,(err,data)=>{
-        if(err){
-            console.log(err);
+        let fileurl;
+        if(req.url == '/'){
+            fileurl = 'Views/index.html' +req.url;
         }else{
-            res.end(data);
+            fileurl = 'Views/'+req.url;
         }
-    })
+        let filepath = path.resolve('./' + fileurl);
 
+        let fileExt = path.extname(filepath);
+        let mimeType = mimeLookup[fileExt];
 
+        if(!mimeType) {
+            send404(res);
+            return;
+        }
+
+        fs.exists(filepath, (exists) => {
+            if(!exists){
+                send404(res);
+                return;
+            }
+
+            res.writeHead(200, {'Content-Type': mimeType});
+            fs.createReadStream(filepath).pipe(res);
+
+        });
+
+    }
 });
 
 server.listen(3000,'localhost',()=>{
