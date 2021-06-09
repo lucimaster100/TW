@@ -1,5 +1,5 @@
 :root{
-    background-color: purple;
+    background-image: radial-gradient( white, black);
 }
 
 *{
@@ -65,7 +65,7 @@ h2{
     margin-bottom: 1rem;
     text-decoration: none;
     color: black;
-    background: linear-gradient(90deg,yellow 0%,red 100%);
+    background: radial-gradient(white 0%,black 100%);
     border-radius: 0.6rem;
 }
 

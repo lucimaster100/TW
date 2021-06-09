@@ -1,0 +1,14 @@
+
+body{
+    color: #EDEDEE;
+
+}
+.choice-container{
+    display: flex;
+    margin-bottom: 0.6rem;
+    width: 100%;
+    border: 0.5rem;
+    background: radial-gradient(white 0%,black 100%);
+    font-size: 3rem;
+    min-width: 80rem;
+}
