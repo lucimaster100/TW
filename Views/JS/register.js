@@ -1,8 +1,7 @@
-const registerBtn=document.querySelector('#registerBtn')
+const registerBtn = document.querySelector('#registerBtn')
 
 
-
-register=e=>{
+register = e => {
     e.preventDefault()
     window.location.assign('../login.html')
 }

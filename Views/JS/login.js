@@ -1,10 +1,9 @@
-
-login=e=>{
+login = e => {
     e.preventDefault()
     window.location.assign('../gameSelect.html')
 }
 
-reg=e=>{
+reg = e => {
 
     e.preventDefault()
 
