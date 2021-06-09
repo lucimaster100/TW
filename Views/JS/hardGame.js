@@ -11,14 +11,14 @@ let questionCounter=0
 let availableQuestions={}
 
 let questions=[
-{
-    question: 'What is 2+2',
-    choice1:'2',
-    choice2:'3',
-    choice3:'4',
-    choice4:'5',
-    anwser:2,
-},
+    {
+        question: 'What is 2+2',
+        choice1:'2',
+        choice2:'3',
+        choice3:'4',
+        choice4:'5',
+        anwser:2,
+    },
     {
         question: 'What is 2+2',
         choice1:'2',
@@ -53,7 +53,7 @@ let questions=[
     }
 ]
 
-const SCORE_POINTS =100
+const SCORE_POINTS =150
 const MAX_QUESTIONS=5
 
 startGame=()=>{
@@ -67,7 +67,7 @@ getNewQuestion=()=>{
     if(availableQuestions.length===0||questionCounter>MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore',score)
 
-    return window.location.assign('/end.html')
+        return window.location.assign('/end.html')
     }
     questionCounter++;
     progressText.innerText=`Question ${questionCounter} of ${MAX_QUESTIONS}`
