@@ -17,7 +17,7 @@ h1{
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: white;
     margin-bottom: 4rem;
 }
@@ -71,7 +71,7 @@ h2{
 
 .btn:hover{
     cursor: pointer;
-    box-shadow:0 0.5rem 1rem 0 red;
+    box-shadow:0 0.5rem 1rem 0 grey;
     transition: transform 150ms ;
     transform: scale(1.1);
 }
