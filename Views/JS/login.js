@@ -1,7 +1,7 @@
 
 login=e=>{
     e.preventDefault()
-    window.location.assign('../index.html')
+    window.location.assign('../gameSelect.html')
 }
 
 reg=e=>{
