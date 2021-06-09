@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
 
         let fileurl;
         if(req.url == '/'){
-            fileurl = 'Views/index.html' +req.url;
+            fileurl = 'Views/login.html' +req.url;
         }else{
             fileurl = 'Views/'+req.url;
         }
