@@ -33,7 +33,7 @@ h2{
     padding: 2rem;
 }
 
-.flex-collumn{
+.flex-column{
     display: flex;
     flex-direction: column;
 
@@ -84,3 +84,4 @@ h2{
 
 #highscore-btn{
 }
+
