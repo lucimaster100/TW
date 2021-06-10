@@ -10,8 +10,11 @@ let score = 0;
 let questionCounter = 0
 let availableQuestions = {}
 
+
 let questions = [
+
     {
+
         question: 'What is 2+2',
         choice1: '2',
         choice2: '3',
