@@ -1,5 +1,5 @@
 :root{
-    background-image: radial-gradient( white, black);
+    background-image: url("wood1.jpg");
 }
 
 *{
@@ -7,7 +7,8 @@
     margin: 0;
     padding: 0;
     font-size: 65%;
-    font-family:"Cursive",cursive;
+    font-family: "Roboto Light", "Roboto Light", serif;
+
 }
 
 h1{
@@ -27,7 +28,7 @@ h2{
     height:100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
@@ -35,7 +36,7 @@ h2{
 
 .flex-column{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
 }
 
@@ -58,15 +59,18 @@ h2{
 }
 
 .btn{
-    font-size: 2.2rem;
-    padding: 2rem 0;
+    font-size: 2.3rem;
+    padding: 1.3rem 0;
     width: 30rem;
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: black;
-    background: radial-gradient(white 0%,black 100%);
-    border-radius: 0.6rem;
+    color: whitesmoke;
+    background:  linear-gradient(wheat 0%,saddlebrown  40% );
+    opacity: 0.85;
+
+
+    border-radius: 1rem;
 }
 
 .btn:hover{
