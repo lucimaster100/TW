@@ -29,7 +29,7 @@ h2{
 
 #navBar{
     width:100vw;
-    height:100vh;
+    height:30vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -91,7 +91,8 @@ h2{
 }
 
 #gallery {
-    margin-top: 100px;
+    margin-left: 4rem;
+    margin-right:4rem;
     line-height:0;
     -webkit-column-count:5; /* split it into 5 columns */
     -webkit-column-gap:5px; /* give it a 5px gap between columns */
