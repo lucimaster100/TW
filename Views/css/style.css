@@ -119,6 +119,7 @@ p{
 #gallery {
     margin-left: 4rem;
     margin-right:4rem;
+    margin-top: 5rem;
     line-height:0;
     -webkit-column-count:5; /* split it into 5 columns */
     -webkit-column-gap:5px; /* give it a 5px gap between columns */
@@ -128,41 +129,8 @@ p{
     column-gap:5px;
 }
 
-#gallery img {
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom:5px; /* to match column gap */
-}
 
-@media (max-width: 1200px) {
-    #gallery {
-        -moz-column-count:    4;
-        -webkit-column-count: 4;
-        column-count:         4;
-    }
-}
 
-@media (max-width: 400px) {
-    #gallery {
-        -moz-column-count:    1;
-        -webkit-column-count: 1;
-        column-count:         1;
-    }
-}
-
-#highscore-btn{
-}
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-}
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.card-container {
-    padding: 2px 16px;
-}
 .menu-icon{
     width: 28px;
     margin-left: 20px;
@@ -174,6 +142,7 @@ p{
         position: absolute;
         top: 70px;
         left: 0;
+
         background: #333;
         width: 100%;
         overflow: hidden;
