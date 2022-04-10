@@ -24,6 +24,10 @@ h2{
 }
 
 .container{
+
+}
+
+#navBar{
     width:100vw;
     height:100vh;
     display: flex;
@@ -31,7 +35,7 @@ h2{
     align-items: flex-start;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .flex-column{
@@ -84,6 +88,39 @@ h2{
     cursor:not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+#gallery {
+    margin-top: 100px;
+    line-height:0;
+    -webkit-column-count:5; /* split it into 5 columns */
+    -webkit-column-gap:5px; /* give it a 5px gap between columns */
+    -moz-column-count:5;
+    -moz-column-gap:5px;
+    column-count:5;
+    column-gap:5px;
+}
+
+#gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px; /* to match column gap */
+}
+
+@media (max-width: 1200px) {
+    #gallery {
+        -moz-column-count:    4;
+        -webkit-column-count: 4;
+        column-count:         4;
+    }
+}
+
+@media (max-width: 400px) {
+    #gallery {
+        -moz-column-count:    1;
+        -webkit-column-count: 1;
+        column-count:         1;
+    }
 }
 
 #highscore-btn{
