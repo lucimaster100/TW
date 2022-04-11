@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href =css/style.css>
+    <link rel="stylesheet" href =css/cards.css>
+    <link rel="stylesheet" href =css/navBar.css>
+</head>
+<body>
+<div class="container">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="Home.html" class="menuitem">Home</a></li>
+                    <li><a href="SearchProducts.html" class="menuitem">Products</a></li>
+                    <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
+                    <li><a href="MyProfile.html" class="menuitem">My Profile</a></li>
+                </ul>
+            </nav>
+            <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px"){
+            MenuItems.style.maxHeight="200px"
+        }else{
+            MenuItems.style.maxHeight="0px"
+        }
+    }
+</script>
+</body>
+</html>

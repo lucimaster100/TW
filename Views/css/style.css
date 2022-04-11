@@ -1,5 +1,5 @@
 :root{
-    background-image: url("wood1.jpg");
+    background-image: url("bgImage.jpg");
 }
 
 *{
@@ -27,41 +27,9 @@ h2{
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    padding-top:25px;
 }
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-nav{
-    flex:1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-a{
-    text-decoration: none;
-    color:#555;
-}
-p{
-    color: #555;
-}
-#navBar{
-    width:100vw;
-    height:30vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 1rem;
-}
+
 
 .flex-column{
     display: flex;
@@ -96,6 +64,7 @@ p{
     text-decoration: none;
     background-color: black;
     color: white;
+
     box-shadow: 10px 15px 50px black;
 }
 
@@ -144,28 +113,14 @@ p{
     }
     nav ul li a{
         color: #fff;
+
     }
     .menu-icon{
         display: block;
         cursor: pointer;
     }
 }
-.txtsrch{
-    margin-left: 18%;
-    margin-top: 5%;
-    width: 23VW;
-    height: 5vh;
-    border: 1px ridge saddlebrown;
-}
-.txtsrch[placeholder]{
-    padding-left: 1%;
-}
-.btnsrch{
-    width: 5VW;
-    height: 5vh;
-    background-color: brown ;
-    border: 0;
-}
+
 .section1{
     width: 27VW;
     margin-right: 2%;
@@ -175,8 +130,9 @@ p{
     margin-top: 2vh;
     width: 50%;
     height: 7vh;
-    background-color: firebrick;
+    background-color: black;
     display: flex;
+
     align-items: center;
 }
 .crg{
@@ -185,7 +141,7 @@ p{
 }
 .submenu{
     background-color: white;
-    display: block;
+    display: inline-list-item;
     padding: 4% 4%;
     border-bottom: 1px solid black;
     width: 50%;

@@ -2,25 +2,305 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>High Scores</title>
+  <title>Profiles</title>
   <link rel="stylesheet" href =css/style.css>
+  <link rel="stylesheet" href =css/cards.css>
+  <link rel="stylesheet" href =css/navBar.css>
 </head>
 <body>
 <div class="container">
-  <div class="navbar">
-    <nav>
-      <ul id="MenuItems">
-        <li><a href="Home.html" class="menuitem">Home</a></li>
-        <li><a href="SearchProducts.html" class="menuitem">Search Items</a></li>
-        <li><a href="Profiles.html" class="menuitem">Browse Profiles</a></li>
-        <li><a href="MyProfile.html" class="menuitem">Manage Profile</a></li>
+  <div class="container">
+    <div class="navbar">
+      <div class="searchBar">
+        <input type="text" placeholder="search" class="txtsrch" /><button type="button" class="btnsrch">Search</button>
+      </div>
+      <nav>
 
-      </ul>
-    </nav>
-    <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()">
+        <ul id="MenuItems">
+          <li><a href="Home.html" class="menuitem">Home</a></li>
+          <li><a href="SearchProducts.html" class="menuitem">Products</a></li>
+          <li><a href="MyProfile.html" class="menuitem">My Profile</a></li>
+
+        </ul>
+      </nav>
+      <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()" alt="">
+
+    </div>
+
+  </div>
+
+
+  <div id="home" >
+    <div id="gallery" >
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile15.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 1</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">England</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile1.jpg" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 2</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">SUA</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile12.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 18</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Romania</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile3.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 3</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Romania</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile4.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 4</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Germany</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile5.jpg" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 5</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Germany</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile0.jpg" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 6</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Bulgaria</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile7.jpg" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 7</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Germany</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile8.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 8</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Romania</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile9.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 9</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Japan</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile10.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 10</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Bulgary</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile11.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 11</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Germany</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile12.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 12</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Romania</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile13.jpg" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 13</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">England</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__details">
+            <img src="photos/profile/profile14.png" alt="">
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back">
+          <div class="card__cta">
+            <div class="cardBackText">
+              <p class="cardText">Profile 14</p>
+              <p class="cardText2">Country : </p>
+              <p class="cardText3">Germany</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
   </div>
 </div>
-
 
 <script>
   var MenuItems=document.getElementById("MenuItems");

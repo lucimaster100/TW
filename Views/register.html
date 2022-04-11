@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register</title>
-  <link rel="stylesheet" href=css/style.css>
-  <link rel="stylesheet" href=css/register.css>
+  <title>Login</title>
+  <link rel="stylesheet" href =css/style.css>
+  <link rel="stylesheet" href =css/register.css>
 </head>
 <body>
-<div class="container">
-  <div id="end" class="flex-center flex-column">
-    <form class="end-form-container">
-      <input type="text" name="name" id="username" placeholder="Enter your name">
-      <input type="password" name="name" id="password" placeholder="Enter your password">
-      <input type="email" name="name" id="email" placeholder="Enter your email">
-      <button class="btn" id="registerBtn" type="submit" onclick="register(event)">Register</button>
+<div class="main">
+  <input type="checkbox" id="chk" aria-hidden="true">
+
+  <div class="signup">
+    <form action="Home.html">
+      <label for="chk" aria-hidden="true">Sign up</label>
+      <input type="text" name="txt" placeholder="User name" required="">
+      <input type="email" name="email" placeholder="Email" required="">
+      <input type="password" name="pswd" placeholder="Password" required="">
+      <button>Sign up</button>
+    </form>
+  </div>
+
+  <div class="login">
+    <form action="Home.html">
+      <label for="chk" aria-hidden="true">Login</label>
+      <input type="email" name="email" placeholder="Email" required="">
+      <input type="password" name="pswd" placeholder="Password" required="">
+      <button>Login</button>
     </form>
   </div>
 </div>
