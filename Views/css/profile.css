@@ -1,0 +1,72 @@
+
+.containerProfile {
+    width: 80%;
+    margin: 120px auto 120px;
+    background-color: #fff;
+    padding: 0 20px 20px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 100px;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: auto;
+    top: -60px;
+    box-shadow: 0 0 0 10px #f0f0f0;
+
+
+}
+.avatar img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+    height: 200px;
+    width: 200px;
+
+}
+
+.paragraphs{
+    margin-bottom: 5rem;
+}
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 65px;
+    color: #333;
+}
+h4 {
+    font-size: 13px;
+    color: #00baff;
+    letter-spacing: 1px;
+    margin-bottom: 25px
+
+}
+p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.SelectItems{
+    font-size: 1.5VW;
+    padding: 0.5rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+
+    box-shadow: 10px 15px 50px black;
+}
