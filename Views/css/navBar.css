@@ -1,3 +1,4 @@
+
 .navbar{
     display: flex;
     align-items: center;
@@ -5,6 +6,31 @@
 
 }
 
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
 .txtsrch{
     flex: 1;
 
@@ -24,7 +50,10 @@
     border: 0;
 
 }
-
+.btnsrch:hover{
+    color: black;
+    background-color: white;
+}
 
 nav{
     flex:1;
@@ -59,3 +88,4 @@ p{
     padding: 20rem 1rem 1rem;
 
 }
+
