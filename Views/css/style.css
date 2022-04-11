@@ -6,7 +6,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 65%;
     font-family: "Roboto Light", "Roboto Light", serif;
 
 }
@@ -88,32 +87,21 @@ p{
     display: none;
 }
 
-.btn{
-    font-size: 2.3rem;
-    padding: 1.3rem 0;
+.menuitem{
+    font-size: 1.5VW;
+    padding: 0.5rem 0;
     width: 30rem;
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: whitesmoke;
-    background:  linear-gradient(wheat 0%,saddlebrown  40% );
-    opacity: 0.85;
-
-
-    border-radius: 1rem;
+    background-color: black;
+    color: white;
+    box-shadow: 10px 15px 50px black;
 }
 
-.btn:hover{
-    cursor: pointer;
-    box-shadow:0 0.5rem 1rem 0 grey;
-    transition: transform 150ms ;
-    transform: scale(1.1);
-}
-
-.btn[disabled]:hover{
-    cursor:not-allowed;
+.menuitem:hover{
+    background-color: saddlebrown;
     box-shadow: none;
-    transform: none;
 }
 
 #gallery {
@@ -161,4 +149,50 @@ p{
         display: block;
         cursor: pointer;
     }
+}
+.txtsrch{
+    margin-left: 18%;
+    margin-top: 5%;
+    width: 23VW;
+    height: 5vh;
+    border: 1px ridge saddlebrown;
+}
+.txtsrch[placeholder]{
+    padding-left: 1%;
+}
+.btnsrch{
+    width: 5VW;
+    height: 5vh;
+    background-color: brown ;
+    border: 0px;
+}
+.section1{
+    width: 27VW;
+    margin-right: 2%;
+    margin-left: 5%;
+}
+.navigation{
+    margin-top: 2vh;
+    width: 50%;
+    height: 7vh;
+    background-color: firebrick;
+    display: flex;
+    align-items: center;
+}
+.crg{
+    margin-left: 3%;
+    color: white;
+}
+.submenu{
+    background-color: white;
+    display: block;
+    padding: 4% 4%;
+    border-bottom: 1px solid black;
+    padding-left: 4%;
+    width: 50%;
+}
+.submenu:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
 }
