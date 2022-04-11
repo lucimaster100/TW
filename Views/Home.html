@@ -7,7 +7,7 @@
     <link rel="stylesheet" href =css/css.css>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <div class="container">
             <div class="navbar">
                 <nav>
@@ -15,14 +15,12 @@
                         <li><a href="Home.html" class="btn">Home</a></li>
                         <li><a href="SearchProducts.html" class="btn">Search Items</a></li>
                         <li> <a href="Profiles.html" class="btn">Browse Profiles</a></li>
-                        <li><a href="MyProfile.html" id="highscore-btn" class="btn">My Profile</a></li>
                     </ul>
                 </nav>
-                <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()">
+                <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()" alt="">
             </div>
         </div>
         <div id="home" >
-
             <div id="gallery" >
 
                 <div class="card">
@@ -556,22 +554,22 @@
 
 
 
-
             </div>
         </div>
     </div>
-    <script>
-        var MenuItems=document.getElementById("MenuItems");
+<script>
+    var MenuItems=document.getElementById("MenuItems");
 
-        MenuItems.style.maxHeight="0px";
+    MenuItems.style.maxHeight="0px";
 
-        function menutoggle(){
-            if(MenuItems.style.maxHeight=="0px"){
-                MenuItems.style.maxHeight="200px"
-            }else{
-                MenuItems.style.maxHeight="0px"
-            }
+    function menutoggle(){
+        if(MenuItems.style.maxHeight==="0px"){
+            MenuItems.style.maxHeight="200px"
+        }else{
+            MenuItems.style.maxHeight="0px"
         }
-    </script>
+    }
+</script>
 </body>
+
 </html>
