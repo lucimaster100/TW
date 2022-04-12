@@ -27,6 +27,23 @@ p{
     color: #555;
 
 }
+.menuitem{
+    font-size: 1.5VW;
+    padding: 0.5rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+
+    box-shadow: 10px 15px 50px black;
+}
+
+.menuitem:hover{
+    background-color: saddlebrown;
+    box-shadow: none;
+}
 
 
 @media only screen and (max-width: 800px){
@@ -53,8 +70,12 @@ p{
         display: block;
         cursor: pointer;
     }
-    menuitem{
-        color: white;
+    .menuitem{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .menuitem:hover{
+        background-color: transparent;
     }
 }
 .txtsrch{

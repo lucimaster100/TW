@@ -55,23 +55,6 @@ h2{
     display: none;
 }
 
-.menuitem{
-    font-size: 1.5VW;
-    padding: 0.5rem 0;
-    width: 30rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    background-color: black;
-    color: white;
-
-    box-shadow: 10px 15px 50px black;
-}
-
-.menuitem:hover{
-    background-color: saddlebrown;
-    box-shadow: none;
-}
 
 #gallery {
     margin-left: 4rem;
