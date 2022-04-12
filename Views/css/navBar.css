@@ -5,6 +5,29 @@
     padding: 20px;
 
 }
+nav{
+    flex:1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+
+}
+a{
+    text-decoration: none;
+    color:#555;
+}
+p{
+    color: #555;
+
+}
+
 
 @media only screen and (max-width: 800px){
     nav ul{
@@ -29,6 +52,9 @@
     .menu-icon{
         display: block;
         cursor: pointer;
+    }
+    menuitem{
+        color: white;
     }
 }
 .txtsrch{
@@ -55,37 +81,5 @@
     background-color: white;
 }
 
-nav{
-    flex:1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
 
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 10px;
-
-}
-a{
-    text-decoration: none;
-    color:#555;
-}
-p{
-    color: #555;
-
-}
-#navBar{
-    width:90vw;
-    height:30vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 20rem 1rem 1rem;
-
-}
 
