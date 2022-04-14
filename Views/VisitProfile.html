@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile x</title>
+    <link rel="stylesheet" href =css/style.css>
+    <link rel="stylesheet" href =css/profile.css>
+    <link rel="stylesheet" href =css/navBar.css>
+
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="Home.html" class="menuitem">Home</a></li>
+                <li><a href="SearchProducts.html" class="menuitem">Feed</a></li>
+                <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
+
+            </ul>
+        </nav>
+        <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()" alt="">
+    </div>
+</div>
+<div class="containerProfile">
+
+
+
+    <div class="avatar">
+        <img src="photos/profile/profile13.jpg" height="150" width="150">
+
+    </div>
+
+    <h2>User Number x Profile </h2>
+    <div class="paragraphs">
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+    </div>
+    <nav>
+        <ul id="editItems">
+            <li><a href="VisitGallery.html" class="menuitem">View Gallery</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px"){
+            MenuItems.style.maxHeight="200px"
+        }else{
+            MenuItems.style.maxHeight="0px"
+        }
+    }
+</script>
+</body>
+</html>
