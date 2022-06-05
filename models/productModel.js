@@ -1,7 +1,29 @@
-let products= require('../data/products')
-const { v4:uuidv4}=require('uuid')//test for id in json file
+var products=[]
 const {writeDataToFile}=require('../utils')
 
+const {Client}= require('pg')
+
+const client = new Client({
+    host: "localhost",
+    user: "postgres",
+    port: 5432,
+    password :'postgres',
+    database :'postgres'
+})
+
+client.connect();
+
+client.query(`SELECT * FROM products`,(err,res)=>{
+    if(!err){
+        fetchQuery(res.rows)
+    }else{
+        console.log(err.message);
+    }
+    client.end;
+})
+function fetchQuery(value){
+    products=value
+}
 function findAll() {
     return new Promise((resolve,reject)=>{
         resolve(products)
@@ -15,25 +37,24 @@ function findById(id) {
 }
 function create(product) {
     return new Promise((resolve,reject)=>{
-        const newProduct={id: uuidv4(), ...product}
-        products.push(newProduct)
-        writeDataToFile('./data/products.json',products)
-        resolve(newProduct)
+        client.query(`INSERT INTO products( title,description, price) VALUES($1,$2,$3)`,[product.title,product.description,product.price])
+            .then(() => resolve({message: 'Insert successfull'}))
+            .catch((e) => reject(e))
+
     })
 }
 function update(id,product) {
     return new Promise((resolve,reject)=>{
-        const index=products.findIndex((p)=>p.id==id)
-        products[index]={id, ...product}
-        writeDataToFile('./data/products.json',products)
-        resolve(products[index])
+        client.query(`UPDATE products SET title=$1,description=$2, price=$3 WHERE $4=id`,[product.title,product.description,product.price,id])
+            .then(() => resolve({message: 'Update successfull'}))
+            .catch((e) => reject(e))
     })
 }
 function remove(id) {
     return new Promise((resolve,reject)=>{
-        products=products.filter((p)=>p.id!=id)
-        writeDataToFile('./data/products.json',products)
-        resolve()
+        client.query(`DELETE FROM products  WHERE $1=id`,[id])
+            .then(() => resolve())
+            .catch((e) => reject(e))
     })
 }
 module.exports= {
