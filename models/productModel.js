@@ -1,5 +1,4 @@
 var products=[]
-const {writeDataToFile}=require('../utils')
 
 const {Client}= require('pg')
 
