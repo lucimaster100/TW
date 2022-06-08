@@ -39,18 +39,18 @@
     color:black
   }
   
-  #formID[type="text"],#formID[type="url"]{
+  .formID[type="text"],.formID[type="url"]{
   width: 99%;
   height: 25px;
   margin-bottom: 10px;
   }
   
 
-  #formID{
+ .formID{
       margin-top: 10px;
   }
 
-  #formID[type="text"],#formID[type="url"],
+ .formID[type="text"],.formID[type="url"],
   textarea {
     background-color: white;
     color:black;
