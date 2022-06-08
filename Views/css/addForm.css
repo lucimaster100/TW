@@ -1,0 +1,118 @@
+:root{
+    background-image: url("bgImage.jpg");
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Light", "Roboto Light", serif;
+
+}
+
+.form {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+
+
+
+
+    height: 95vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+ 
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 99%;
+    height: 25px;
+    margin-bottom: 10px;
+  
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    background-color: white;
+    color:black
+  }
+  
+  #formID[type="text"],#formID[type="url"]{
+  width: 99%;
+  height: 25px;
+  margin-bottom: 10px;
+  }
+  
+
+  #formID{
+      margin-top: 10px;
+  }
+
+  #formID[type="text"],#formID[type="url"],
+  textarea {
+    background-color: white;
+    color:black;
+    margin-top: 10px;
+  }
+  
+  
+  h1 {
+    color: silver;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  
+  
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .laber {
+    color: silver;
+  }
+  
+  .input-container {
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
+    margin-bottom: 25px;
+  
+  }
+
+  input[type = "checkbox"] {
+    margin-left: 50% ;
+ 
+    margin-top: 10px;
+  }
+
+  input[type = "file"] {
+   margin-left: 30% ;
+   margin-top: 10px;
+ }
+  
+  #uploadForm {
+    height: 110fr;
+    width: 350px;
+    background-color: grey;
+    margin-bottom: 100px;
+    border-radius: 20px;
+  }
+  
+  #upload {
+    background-color: silver;
+    color: black;
+    outline: 0;
+
+    margin-bottom: 10px;
+    width: 100px;
+  }

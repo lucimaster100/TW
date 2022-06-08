@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Form</title>
+  <link rel="stylesheet" href =css/addForm.css>
+
+</head>
+<body>
+<div class="main">
+    <div class="form">
+        <div id="uploadForm" >
+          <h1>Upload Book</h1>
+          <form >
+
+            <div class="input-container">
+              <label>Type</label>
+              <select id="formID" name="Type">
+                <option value="Unspecificated" selected></option>
+                <option value="Plastic Bottle">Plastic Bottle</option>
+                <option value="Glass Bottle">Glass Bottle</option>
+                <option value="Aluminium Can">Aluminium Can</option>
+                <option value="Flask">Flask</option>
+                <option value="Jug">Jug</option>
+                
+                <option value="Cask">Cask</option>
+                <option value="Barrel">Barrel</option>
+              </select>
+            </div>
+            
+            <div class="input-container">
+              <label>Price </label>
+              <input id="formID" type="text" name="Price" placeholder="Price" />
+            </div>
+
+            <div class="input-container">
+              <label>Origin </label>
+              <input id="formID" type="text" name="Origin" placeholder="Origin" />
+            </div>
+
+            <div class="input-container">
+              <label>Utilisation Time </label>
+              <select id="formID" name="Type">
+                <option value="Unspecificated" selected></option>
+                <option value="Factory New">Factory New</option>
+                <option value="New">New</option>
+                <option value="Low Utilisation">Low Utilisation</option>
+                <option value="High Utilisation">High Utilisation</option>
+                <option value="Worn Off">Worn Off</option>
+                <option value="Unitilisable">Unitilisable</option>
+            
+              </select>
+            </div>
+
+           
+
+              <div class="input-container">
+                <label>Eticheta prezenta 
+                    
+                </label>
+                <input id="formCheck" type="checkbox" name="eticheta" placeholder="URL" />
+              </div>
+              <div class="input-container">
+                <label class="chooseFile">Image    
+                    
+                </label>
+                <input id="formID" type="file" accept="image/*" />
+              </div>
+            
+            <div class="button-container">
+              <button id="upload" class="btn btn-primary" type="submit">
+                Upload
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+</div>
+</body>
+</html>
