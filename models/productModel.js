@@ -12,19 +12,16 @@ const client = new Client({
 
 client.connect();
 
-client.query(`SELECT * FROM products`,(err,res)=>{
-    if(!err){
-        fetchQuery(res.rows)
-    }else{
-        console.log(err.message);
-    }
-    client.end;
-})
-function fetchQuery(value){
-    products=value
-}
 function findAll() {
     return new Promise((resolve,reject)=>{
+        client.query(`SELECT * FROM products`,(err,res)=>{
+            if(!err){
+                products=res.rows
+            }else{
+                console.log(err.message);
+            }
+            client.end;
+        })
         resolve(products)
     })
 }
