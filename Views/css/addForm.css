@@ -101,7 +101,7 @@
  }
   
   #uploadForm {
-    height: 110fr;
+    height: 100vh;
     width: 350px;
     background-color: grey;
     margin-bottom: 100px;
