@@ -14,6 +14,11 @@
           <form >
 
             <div class="input-container">
+              <label>Title </label>
+              <input class="formID" type="text" name="Title" placeholder="Title" />
+            </div>
+
+            <div class="input-container">
               <label>Type</label>
               <select class="formID" name="Type">
                 <option value="Unspecificated" selected>Select</option>
@@ -30,7 +35,7 @@
             
             <div class="input-container">
               <label>Price </label>
-              <input class="formID" type="text" name="Price" placeholder="Price" />
+              <input class="formID" type="number" name="Price" placeholder="Price" />
             </div>
 
             <div class="input-container">
@@ -55,11 +60,16 @@
            
 
               <div class="input-container">
-                <label>Eticheta prezenta 
+                <label>Present Label
                     
                 </label>
                 <input id="formCheck" type="checkbox" name="eticheta"  />
               </div>
+
+              <div class="input-container">
+                <textarea rows="5" cols="50" name="comment" form="uploadForm" placeholder="Enter text here..."></textarea>
+              </div>
+
               <div class="input-container">
                 <label class="chooseFile">Image    
                     
