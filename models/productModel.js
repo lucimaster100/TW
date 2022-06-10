@@ -1,4 +1,5 @@
 var products = []
+var product=[]
 
 const { Client } = require('pg')
 
@@ -12,30 +13,30 @@ const client = new Client({
 
 client.connect();
 
-function findAll() {
+function findAllProducts() {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products`, (err, res) => {
             if (!err) {
-                products = res.rows
+                resolve(res.rows)
             } else {
                 console.log(err.message);
+                reject(err)
             }
             client.end;
         })
-        resolve(products)
     })
 }
 function findByType(param) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products WHERE type = $1 `, [param], (err, res) => {
             if (!err) {
-                products = res.rows
+                resolve(res.rows)
             } else {
                 console.log(err.message);
+                reject(err)
             }
             client.end;
         })
-        resolve(products)
     })
 }
 
@@ -43,9 +44,10 @@ function findByPrice(param) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products WHERE price = $1 `, [param], (err, res) => {
             if (!err) {
-                products = res.rows
+                resolve(res.rows)
             } else {
                 console.log(err.message);
+                reject(err)
             }
             client.end;
         })
@@ -56,26 +58,26 @@ function findByOrigin(param) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products WHERE origin = $1 `, [param], (err, res) => {
             if (!err) {
-                products = res.rows
+                resolve(res.rows)
             } else {
                 console.log(err.message);
+                reject(err)
             }
             client.end;
         })
-        resolve(products)
     })
 }
 function findByUtilisation(param) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products WHERE utilisation = $1 `, [param], (err, res) => {
             if (!err) {
-                products = res.rows
+                resolve(res.rows)
             } else {
                 console.log(err.message);
+                reject(err)
             }
             client.end;
         })
-        resolve(products)
     })
 }
 
@@ -83,19 +85,26 @@ function findByLabel(param) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products WHERE label = $1 `, [param], (err, res) => {
             if (!err) {
-                products = res.rows
+                resolve(res.rows)
             } else {
                 console.log(err.message);
+                reject(err)
             }
             client.end;
         })
-        resolve(products)
     })
 }
-function findById(id) {
+function findProductById(id) {
     return new Promise((resolve, reject) => {
-        const product = products.find((p) => p.id == id)
-        resolve(product)
+        client.query(`SELECT * FROM products WHERE id = $1 `, [id], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
     })
 }
 function create(product) {
@@ -121,8 +130,8 @@ function remove(id) {
     })
 }
 module.exports = {
-    findAll,
-    findById, findByLabel, findByOrigin, findByPrice, findByUtilisation,
+    findAllProducts,
+    findProductById, findByLabel, findByOrigin, findByPrice, findByUtilisation,
     create,
     update,
     remove,

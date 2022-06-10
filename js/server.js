@@ -1,5 +1,6 @@
 const http = require('http')
 const prodC = require('../controllers/productController')
+const userC=require('../controllers/userController')
 const url = require('url')
 const fs = require('fs')
 const lookup = require('mime-types').lookup
@@ -27,9 +28,6 @@ const server = http.createServer((req, res) => {
     else if (req.url.match(/\/productsOrigin\/([a-zA-Z]+)/) && req.method == 'GET') {
         const origin = req.url.split('/')[2]
         prodC.getProductbyOrigin(req, res, origin)
-
-
-
     } else if (req.url.match(/\/products\/([0-9]+)/) && req.method == 'GET') {
         const id = req.url.split('/')[2]
         prodC.getProductById(req, res, id)
@@ -41,7 +39,12 @@ const server = http.createServer((req, res) => {
     } else if (req.url.match(/\/products\/([0-9]+)/) && req.method == 'DELETE') {
         const id = req.url.split('/')[2]
         prodC.deleteProduct(req, res, id)
-    } else {
+    } else if (req.url == '/users' && req.method == 'GET') {
+        userC.getAllUsers(req, res)
+    } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'GET') {
+        const id = req.url.split('/')[2]
+        userC.getUserById(req, res, id)
+    }else{
         let parsedURL = url.parse(req.url, true)
         let path = parsedURL.path.replace(/^\/+|\/+$/g, "")
         if (path == "") {

@@ -3,16 +3,16 @@ const { getPostData } = require('../utils')
 
 async function getAllProducts(req, res) {
     try {
-        const products = await Product.findAll()
+        const products = await Product.findAllProducts()
         res.writeHead(200, { 'Content-Type': 'application/json' })
         res.end(JSON.stringify(products))
     } catch (error) {
         console.log(error)
     }
 }
-async function getProductbyID(req, res, id) {
+async function getProductById(req, res, id) {
     try {
-        const product = await Product.findById(id)
+        const product = await Product.findProductById(id)
         if (!product) {
             res.writeHead(404, { 'Content-Type': 'application/json' })
             res.end(JSON.stringify({ message: 'Product Not Found' }))
@@ -116,7 +116,7 @@ async function createProduct(req, res) {
 }
 async function updateProduct(req, res, id) {
     try {
-        const product = await Product.findById(id)
+        const product = await Product.findProductById(id)
 
         if (!product) {
             res.writeHead(404, { 'Content-Type': 'application/json' })
@@ -143,7 +143,7 @@ async function updateProduct(req, res, id) {
 }
 async function deleteProduct(req, res, id) {
     try {
-        const product = await Product.findById(id)
+        const product = await Product.findProductById(id)
         if (!product) {
             res.writeHead(404, { 'Content-Type': 'application/json' })
             res.end(JSON.stringify({ message: 'Product Not Found' }))
@@ -158,7 +158,7 @@ async function deleteProduct(req, res, id) {
 }
 module.exports = {
     getAllProducts,
-    getProductbyID,
+    getProductById,
     getProductbyType,
     getProductbyUtilisation,
     getProductbyOrigin,
