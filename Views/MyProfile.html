@@ -1,66 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My Profile</title>
-    <link rel="stylesheet" href =css/style.css>
-    <link rel="stylesheet" href =css/profile.css>
-    <link rel="stylesheet" href =css/navBar.css>
-
+    <link rel="stylesheet" href=css/style.css>
+    <link rel="stylesheet" href=css/profile.css>
+    <link rel="stylesheet" href=css/dropdown.css>
+    <link rel="stylesheet" href=css/profileButtons.css>
 </head>
+
 <body>
-    <div class="container">
-        <div class="navbar">
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="Home.html" class="menuitem">Home</a></li>
-                    <li><a href="SearchProducts.html" class="menuitem">Feed</a></li>
-                    <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
+    <nav id="main_nav">
+        <ul>
 
+
+
+
+            <li><a href="Home.html" class="menuitem">Home</a></li>
+            <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
+            <li><a href="MyProfile.html" class="menuitem">My Profile</a></li>
+            <li class="disabled">
+                <a href="">Filter</a>
+                <ul>
+                    <li>
+
+                        <a href="">Type</a>
+                        <ul>
+                            <li><a href="">Plastic Bottle</a></li>
+                            <li><a href="">Glass Bottle</a></li>
+                            <li><a href="">Plastic Bottle</a></li>
+                            <li><a href="">Aluminium Can</a></li>
+                            <li><a href="">Flask</a></li>
+                            <li><a href="">Jug</a></li>
+                            <li><a href="">Cask</a></li>
+                            <li><a href="">Barrel</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="">Price</a>
+                        <ul>
+                            <li><a href="">Lower than 10</a></li>
+                            <li><a href="">Lower than 50</a></li>
+                            <li><a href="">Lower than 100</a></li>
+                            <li><a href="">Lower than 500</a></li>
+                            <li><a href="">Lower than 1000</a></li>
+                            <li><a href="">Lower than 5000</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+
+                        <a href="">Utilisation</a>
+                        <ul>
+                            <li><a href="">Factory New</a></li>
+                            <li><a href="">New</a></li>
+                            <li><a href="">Low Utilisation</a></li>
+                            <li><a href="">High Utilisation</a></li>
+                            <li><a href="">Worn Off</a></li>
+                            <li><a href="">Unitilisable</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="">Origin</a>
+                        <ul>
+                            <li><a href="">Romania</a></li>
+                            <li><a href="">Germany</a></li>
+                            <li><a href="">France</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="">Label</a>
+                        <ul>
+                            <li><a href="">Yes</a></li>
+                            <li><a href="">No</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </nav>
-            <img src="photos/menu.png" class="menu-icon" onclick="menutoggle()" alt="">
-        </div>
-    </div>
-<div class="containerProfile">
-
-
-
-    <div class="avatar">
-        <img src="photos/profile/profile13.jpg" height="150" width="150" alt="Error">
-
-    </div>
-
-    <h2>My Profile </h2>
-    <div class="paragraphs">
-    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-    </div>
-    <nav>
-        <ul id="editItems">
-            <li><a href="MyGallery.html" class="menuitem">My Gallery</a></li>
-            <li><a href="" class="menuitem">Change Description</a></li>
-            <li><a href="addForm.html" class="menuitem">Add Photo</a></li>
-
+            </li>
         </ul>
     </nav>
-</div>
+    <div class="containerProfile">
 
-<script>
-    var MenuItems=document.getElementById("MenuItems");
 
-    MenuItems.style.maxHeight="0px";
 
-    function menutoggle(){
-        if(MenuItems.style.maxHeight=="0px"){
-            MenuItems.style.maxHeight="200px"
-        }else{
-            MenuItems.style.maxHeight="0px"
+        <div class="avatar">
+            <img src="photos/profile/profile13.jpg" height="150" width="150" alt="Error">
+
+        </div>
+
+        <h2>My Profile </h2>
+        <div class="paragraphs">
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                previewing layouts and visual mockups.</p>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                previewing layouts and visual mockups.</p>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                previewing layouts and visual mockups.</p>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                previewing layouts and visual mockups.</p>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                previewing layouts and visual mockups.</p>
+        </div>
+        <nav>
+            <ul id="editItems">
+                <a href="MyGallery.html">
+                    <button class="buttonProfile">Gallery</button>
+                </a>
+                <a href="">
+                    <button class="buttonProfile">Change Description</button>
+                </a>
+                <a href="addForm.html">
+                    <button class="buttonProfile">Add Photo</button>
+                </a>
+
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
         }
-    }
-</script>
+    </script>
 </body>
+
 </html>

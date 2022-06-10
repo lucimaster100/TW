@@ -6,6 +6,7 @@
   "dependencies": {
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
+    "node-fetch": "^2.6.1",
     "pg": "^8.7.3",
     "uuid": "^8.3.2"
   },

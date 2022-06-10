@@ -3,9 +3,37 @@ const { getPostData } = require('../utils')
 
 async function getAllUsers(req, res) {
     try {
-        const products = await User.findAllUsers()
+        const user = await User.findAllUsers()
         res.writeHead(200, { 'Content-Type': 'application/json' })
-        res.end(JSON.stringify(products))
+        res.end(JSON.stringify(user))
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function getUserByUsername(req, res,name) {
+    try {
+        const user = await User.findUserByUsername(name)
+        if (!user) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(user))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function getUserByEmail(req, res,email) {
+    try {
+        const user = await User.findUserByEmail(email)
+        if (!user) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(user))
+        }
     } catch (error) {
         console.log(error)
     }
@@ -40,7 +68,7 @@ async function createUser(req, res) {
     } catch (error) {
         console.log(error)
     }
-}async function updateUser(req, res, id) {
+} async function updateUser(req, res, id) {
     try {
         const user = await User.findUserById(id)
         if (!user[0]) {
@@ -48,7 +76,7 @@ async function createUser(req, res) {
             res.end(JSON.stringify({ message: 'Product Not Found' }))
         } else {
             const body = await getPostData(req)
-            const { username, email, password,description,img,isAdmin } = JSON.parse(body)
+            const { username, email, password, description, img, isAdmin } = JSON.parse(body)
 
             const userData = {
                 username: username || user[0].username,
@@ -87,5 +115,7 @@ module.exports = {
     getUserById,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    getUserByUsername,
+    getUserByEmail
 }

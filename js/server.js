@@ -1,13 +1,17 @@
 const http = require('http')
 const prodC = require('../controllers/productController')
-const userC=require('../controllers/userController')
+const userC = require('../controllers/userController')
 const url = require('url')
 const fs = require('fs')
 const lookup = require('mime-types').lookup
+const fetch = require('node-fetch');
+
+
 
 const server = http.createServer((req, res) => {
     if (req.url == '/products' && req.method == 'GET') {
-        prodC.getAllProducts(req, res)
+        prodC.getAllProducts(req, res);
+
     }
     else if (req.url.match(/\/productsType\/([a-zA-Z]+)/) && req.method == 'GET') {
         const type = req.url.split('/')[2]
@@ -41,9 +45,16 @@ const server = http.createServer((req, res) => {
         prodC.deleteProduct(req, res, id)
     } else if (req.url == '/users' && req.method == 'GET') {
         userC.getAllUsers(req, res)
-    } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'GET') {
+    } else if (req.url.match(/\/usersById\/([0-9]+)/) && req.method == 'GET') {
         const id = req.url.split('/')[2]
         userC.getUserById(req, res, id)
+    } else if (req.url.match(/\/usersByName\/([a-zA-Z]+)/) && req.method == 'GET') {
+        const name = req.url.split('/')[2]
+        userC.getUserByUsername(req, res, name)
+    }
+    else if (req.url.match(/\/usersByEmail\/([a-zA-Z0-9@]+)/) && req.method == 'GET') {
+        const email = req.url.split('/')[2]
+        userC.getUserByEmail(req, res, email)
     } else if (req.url == '/users' && req.method == 'POST') {
         userC.createUser(req, res)
     } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'PUT') {
@@ -52,7 +63,7 @@ const server = http.createServer((req, res) => {
     } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'DELETE') {
         const id = req.url.split('/')[2]
         userC.deleteUser(req, res, id)
-    } else{
+    } else {
         let parsedURL = url.parse(req.url, true)
         let path = parsedURL.path.replace(/^\/+|\/+$/g, "")
         if (path == "") {

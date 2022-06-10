@@ -40,6 +40,32 @@ function findUserById(id) {
         })
     })
 }
+function findUserByUsername(username) {
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT * FROM users WHERE username = $1 `, [username], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
+function findUserByEmail(email) {
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT * FROM users WHERE email = $1 `, [email], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
 function create(user) {
     return new Promise((resolve, reject) => {
         client.query(`INSERT INTO users( username,email, password) VALUES($1,$2,$3)`, [user.username, user.email, user.password])
@@ -68,5 +94,7 @@ module.exports = {
     findUserById,
     create,
     update,
-    remove
+    remove,
+    findUserByUsername,
+    findUserByEmail
 }
