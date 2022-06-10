@@ -127,9 +127,9 @@ async function updateProduct(req, res, id) {
             const { title, description, price } = JSON.parse(body)
 
             const productData = {
-                title: title || product.title,
-                description: description || product.description,
-                price: price || product.price
+                title: title || product[0].title,
+                description: description || product[0].description,
+                price: price || product[0].price
             }
 
             const updProduct = await Product.update(id, productData)

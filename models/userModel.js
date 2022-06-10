@@ -40,9 +40,33 @@ function findUserById(id) {
         })
     })
 }
+function create(user) {
+    return new Promise((resolve, reject) => {
+        client.query(`INSERT INTO users( username,email, password) VALUES($1,$2,$3)`, [user.username, user.email, user.password])
+            .then(() => resolve({ message: 'Insert successfull' }))
+            .catch((e) => reject(e))
 
-
+    })
+}
+function update(id, user) {
+    console.log(user)
+    return new Promise((resolve, reject) => {
+        client.query(`UPDATE users SET username=$1,email=$2, password=$3,description=$4,img=$5,"isAdmin"=$6 WHERE $7=id`, [user.username, user.email, user.password,user.description,user.img,user.isAdmin ,id])
+            .then(() => resolve({ message: 'Update successfull' }))
+            .catch((e) => reject(e))
+    })
+}
+function remove(id) {
+    return new Promise((resolve, reject) => {
+        client.query(`DELETE FROM users  WHERE $1=id`, [id])
+            .then(() => resolve())
+            .catch((e) => reject(e))
+    })
+}
 module.exports = {
     findAllUsers,
-    findUserById
+    findUserById,
+    create,
+    update,
+    remove
 }

@@ -44,7 +44,15 @@ const server = http.createServer((req, res) => {
     } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'GET') {
         const id = req.url.split('/')[2]
         userC.getUserById(req, res, id)
-    }else{
+    } else if (req.url == '/users' && req.method == 'POST') {
+        userC.createUser(req, res)
+    } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'PUT') {
+        const id = req.url.split('/')[2]
+        userC.updateUser(req, res, id)
+    } else if (req.url.match(/\/users\/([0-9]+)/) && req.method == 'DELETE') {
+        const id = req.url.split('/')[2]
+        userC.deleteUser(req, res, id)
+    } else{
         let parsedURL = url.parse(req.url, true)
         let path = parsedURL.path.replace(/^\/+|\/+$/g, "")
         if (path == "") {
