@@ -98,12 +98,17 @@ async function createProduct(req, res) {
     try {
         const body = await getPostData(req)
 
-        const { title, description, price } = JSON.parse(body)
+        const { title,type, price,origin,utilisation,label,image,user_id } = JSON.parse(body)
 
         const product = {
             title,
-            description,
-            price
+            type,
+            price,
+            origin,
+            utilisation,
+            label,
+            image,
+            user_id
         }
 
         const newProduct = await Product.create(product)
@@ -124,12 +129,17 @@ async function updateProduct(req, res, id) {
         } else {
             const body = await getPostData(req)
 
-            const { title, description, price } = JSON.parse(body)
+            const { title,type, price,origin,utilisation,label,image,user_id } = JSON.parse(body)
 
             const productData = {
                 title: title || product[0].title,
-                description: description || product[0].description,
-                price: price || product[0].price
+                type: type || product[0].type,
+                price: price || product[0].price,
+                origin: origin || product[0].origin,
+                utilisation: utilisation || product[0].utilisation,
+                label: label || product[0].label,
+                image: image || product[0].image,
+                user_id: user_id || product[0].user_id
             }
 
             const updProduct = await Product.update(id, productData)

@@ -109,7 +109,7 @@ function findProductById(id) {
 }
 function create(product) {
     return new Promise((resolve, reject) => {
-        client.query(`INSERT INTO products( title,description, price) VALUES($1,$2,$3)`, [product.title, product.description, product.price])
+        client.query(`INSERT INTO products( title,type, price,origin,utilisation,label,image,user_id) VALUES($1,$2,$3,$4,$5,$6,$7,$8)`, [product.title, product.type, product.price,product.origin,product.utilisation,product.label,product.image,product.user_id])
             .then(() => resolve({ message: 'Insert successfull' }))
             .catch((e) => reject(e))
 
@@ -117,7 +117,7 @@ function create(product) {
 }
 function update(id, product) {
     return new Promise((resolve, reject) => {
-        client.query(`UPDATE products SET title=$1,description=$2, price=$3 WHERE $4=id`, [product.title, product.description, product.price, id])
+        client.query(`UPDATE products SET title=$1,type=$2, price=$3,origin=$4,utilisation=$5,label=$6,image=$7,user_id=$8 WHERE $9=id`, [product.title, product.type, product.price,product.origin,product.utilisation,product.label,product.image,product.user_id,id])
             .then(() => resolve({ message: 'Update successfull' }))
             .catch((e) => reject(e))
     })
