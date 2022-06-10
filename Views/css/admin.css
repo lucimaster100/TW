@@ -1,8 +1,62 @@
-:root{
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 80px;
+
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+p {
+    color: #555;
+
+}
+
+.menuitem {
+    font-size: 1.5VW;
+    padding: 0.5rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+
+    box-shadow: 10px 15px 50px black;
+}
+
+.menuitem:hover {
+    background-color: saddlebrown;
+    box-shadow: none;
+}
+
+:root {
     background-image: url("bgImage.jpg");
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,39 +66,39 @@
 
 
 input[type="text"],
-  input[type="password"] ,input[type="number"],input[type="email"]{
+input[type="password"],
+input[type="number"],
+input[type="email"] {
     width: 20%;
     height: 25px;
     margin-bottom: 10px;
     margin-right: 10px;
-  
-  }
 
- .container{ 
+}
 
-     margin-left: 30%;
+.container {
+    
+    margin-left: 30%;
     justify-content: center;
-    padding-top: 130px;
-
-
 
     height: 100vh;
 }
-.adminSection{
+
+.adminSection {
     padding-bottom: 6vh;
 }
 
-.adminLabel{
+.adminLabel {
 
     height: 25px;
 
-    color:black;
+    color: black;
     font-size: 20px;
     padding-right: 10px;
 
 }
 
-.adminButton{
+.adminButton {
     height: 25px;
     width: 75px;
     background-color: black;
@@ -52,13 +106,14 @@ input[type="text"],
 
 }
 
-.adminButton:hover{
+.adminButton:hover {
     height: 25px;
     width: 75px;
     background-color: white;
     color: black;
-    
+
 }
-.adminButton:active{
+
+.adminButton:active {
     background-color: gray;
 }
