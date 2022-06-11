@@ -1,56 +1,6 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 80px;
 
-}
 
-nav {
-    flex: 1;
-    text-align: right;
 
-}
-
-nav ul {
-    display: inline-block;
-    list-style-type: none;
-
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-
-}
-
-a {
-    text-decoration: none;
-    color: #555;
-}
-
-p {
-    color: #555;
-
-}
-
-.menuitem {
-    font-size: 1.5VW;
-    padding: 0.5rem 0;
-    width: 30rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    background-color: black;
-    color: white;
-
-    box-shadow: 10px 15px 50px black;
-}
-
-.menuitem:hover {
-    background-color: saddlebrown;
-    box-shadow: none;
-}
 
 :root {
     background-image: url("bgImage.jpg");
@@ -76,8 +26,9 @@ input[type="email"] {
 
 }
 
+
 .container {
-    
+   
     margin-left: 30%;
     justify-content: center;
 

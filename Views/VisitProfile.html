@@ -7,6 +7,8 @@
     <link rel="stylesheet" href =css/profile.css>
     <link rel="stylesheet" href =css/dropdown.css>
     <link rel="stylesheet" href =css/profileButtons.css>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/init.js"></script>    
 
 </head>
 <body>
@@ -15,7 +17,7 @@
          
          
         
-       
+          <li><a href="#" class="menuitem logout">Log Out</a></li>
           <li><a href="Home.html" class="menuitem">Home</a></li>
           <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
           <li><a href="MyProfile.html" class="menuitem">My Profile</a></li>
@@ -111,18 +113,6 @@
     </nav>
 </div>
 
-<script>
-    var MenuItems=document.getElementById("MenuItems");
 
-    MenuItems.style.maxHeight="0px";
-
-    function menutoggle(){
-        if(MenuItems.style.maxHeight=="0px"){
-            MenuItems.style.maxHeight="200px"
-        }else{
-            MenuItems.style.maxHeight="0px"
-        }
-    }
-</script>
 </body>
 </html>

@@ -2,10 +2,10 @@
 #main_nav{
 
     margin: auto;
-    width: 50%;
+    width: 50%;     
     padding: 10px;
     height: 100px;
-    
+
 
 }
 
@@ -19,9 +19,9 @@
 
 #main_nav li {
     float: left;
-    
+    font-size: 14px;
     position: relative;
-    width: 150px;
+    width: 120px;
     list-style: none;
     -webkit-transition: .5s;
     transition: .5s;
