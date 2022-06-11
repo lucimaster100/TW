@@ -67,7 +67,7 @@ const server = http.createServer((req, res) => {
         let parsedURL = url.parse(req.url, true)
         let path = parsedURL.path.replace(/^\/+|\/+$/g, "")
         if (path == "") {
-            path = "Home.html"
+            path = "login.html"
         }
         let file = "./Views/" + path
         res.writeHead(200, { 'Content-Type': 'text/html' })
