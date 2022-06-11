@@ -5,28 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <title>Login</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/register.css">
     <script defer src="js/login.js"></script>
 </head>
 
 <body class="login">
     <div class="container">
-        <h2 class="text-center">Login</h2>
+        <div class="input-groupHead">
+        <h2 class="text-center"><b>Login</b></h2>
+    </div>
         <br>
         <form action="/home.html" class="loginForm" method="post">
             <div class="input-group">
-                <label for="username" class="label">Username</label>
-                <input type="text" id="username" class="input">
+                <label for="username" class="label"><b>Username</b></label>
+                <input type="text" id="username" class="input"><br>
                 <span class="error-message"></span>
             </div>
             <br>
             <div class="input-group">
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" class="password">
+                <label for="password" class="label"><b>Password</b></label>
+                <input type="password" id="password" class="password"><br>
                 <span class="error-message"></span>
             </div>
             <br>
-            <button class="button" type="submit">Login</button>
+            <div class="input-groupButton">
+            <button class="buttonLogin" type="submit">Login</button>
+
+            <button class="buttonLogin" type="submit">Register</button>
+        </div>
         </form>
     </div>
 

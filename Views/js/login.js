@@ -26,7 +26,7 @@ class Login {
         if (field.value.trim() == "") {
             this.setStatus(
                 field,
-                `${field.previousElementSibling.innerText}Cannot be blank `,
+                `${field.previousElementSibling.innerText} cannot be blank `,
                 "error"
             );
 
@@ -37,7 +37,7 @@ class Login {
                 if (field.value.length < 8) {
                     this.setStatus(
                         field,
-                        `${field.previousElementSibling.innerText}Cannot be short `,
+                        `${field.previousElementSibling.innerText} must be at least 8 characters long `,
                         "error"
                     );
                     return false;
