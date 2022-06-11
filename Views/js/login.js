@@ -1,16 +1,23 @@
 let username="ana";
 
 const fetchUserCredentials=async (username) =>{
-    let UserData= await fetch(`/usersByName/${username}`)
-    let UserDataJson= await UserData.json()
-    return UserDataJson
+    try {
+        let UserData = await fetch(`/usersByName/${username}`)
+        let UserDataJson = await UserData.json()
+        return UserDataJson
+    }catch (err){
+        console.log(err)
+    }
 }
 const getUserData=async()=>{
-    let jsonData=await fetchUserCredentials('username1')
-    console.log(jsonData[0])
-    console.log(jsonData[0].username)
-    console.log(jsonData[0].password)
-    
+    try {
+        let jsonData = await fetchUserCredentials('username1')
+        console.log(jsonData[0])
+        console.log(jsonData[0].username)
+        console.log(jsonData[0].password)
+    }catch (err){
+        console.log(err)
+    }
 }
 
 class Login {
