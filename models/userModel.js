@@ -15,7 +15,7 @@ client.connect();
 
 function findAllUsers() {
     return new Promise((resolve, reject) => {
-        client.query(`SELECT * FROM users`, (err, res) => {
+        client.query(`SELECT id,username,img FROM users`, (err, res) => {
             if (!err) {
                 resolve(res.rows)
             } else {
