@@ -15,15 +15,8 @@
 
 <body>
   <div class="container">
-  
-
-
-
         <nav id="main_nav">
           <ul>
-           
-           
-          
             <li><a href="#" class="menuitem logout">Log Out</a></li>
             <li><a href="Home.html" class="menuitem">Home</a></li>
             <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
@@ -92,25 +85,18 @@
             </li>
           </ul>
         </nav>
-  
-   
-
-
-
 
     <div class="form">
       <div id="uploadForm">
         <h1>Upload Book</h1>
-        <form>
-
+        <form id="productForm" method="post">
           <div class="input-container">
             <label>Title </label>
-            <input class="formID" type="text" name="Title" placeholder="Title" />
+            <input class="formID" type="text" name="Title" id="title" placeholder="Title" />
           </div>
-
           <div class="input-container">
             <label>Type</label>
-            <select class="formID" name="Type">
+            <select class="formID" name="Type" id="type">
               <option value="Unspecificated" selected>Select</option>
               <option value="Plastic Bottle">Plastic Bottle</option>
               <option value="Glass Bottle">Glass Bottle</option>
@@ -125,17 +111,17 @@
 
           <div class="input-container">
             <label>Price </label>
-            <input class="formID" type="number" name="Price" placeholder="Price" />
+            <input class="formID" type="number" name="Price" placeholder="Price" id="price" />
           </div>
 
           <div class="input-container">
             <label>Origin </label>
-            <input class="formID" type="text" name="Origin" placeholder="Origin" />
+            <input class="formID" type="text" name="Origin" placeholder="Origin" id="origin" />
           </div>
 
           <div class="input-container">
             <label>Utilisation Time </label>
-            <select class="formID" name="Type">
+            <select class="formID" name="Type" id="utilisation">
               <option value="Unspecificated" selected>Select</option>
               <option value="Factory New">Factory New</option>
               <option value="New">New</option>
@@ -146,14 +132,11 @@
 
             </select>
           </div>
-
-
-
           <div class="input-container">
             <label>Present Label
 
             </label>
-            <input id="formCheck" type="checkbox" name="eticheta" />
+            <input type="checkbox" name="eticheta" id="label"/>
           </div>
 
 
@@ -161,7 +144,7 @@
             <label class="chooseFile">Image
 
             </label>
-            <input class="formID" type="file" accept="image/*" />
+            <input class="formID" type="file" accept="image/*" id="image"/>
           </div>
 
           <div class="button-container">
@@ -175,5 +158,5 @@
 
   </div>
 </body>
-
+<script src="productPost.js"></script>
 </html>

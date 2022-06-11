@@ -8,18 +8,13 @@ myForm.addEventListener('submit',function(e){
         method: 'POST',
         body: JSON.stringify({
             username: username,
-        email: email,
-        password: password}),
+            email: email,
+            password: password}),
         headers: {'Content-type':'application/json'}
     }).then(function(response){
         return response.json()})
         .then(function(data)
-        {console.log(data)
-            title=document.getElementById("title")
-            body=document.getElementById("bd")
-            title.innerHTML = data.title
-            body.innerHTML = data.body
-        }).catch(error => console.error('Error:', error));
+        {console.log(data)})
 })
 
 
