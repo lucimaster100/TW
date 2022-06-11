@@ -1,6 +1,7 @@
 let username="ana";
 let validUsername=0;
 const fetchUserCredentials=async (username) =>{
+    
     try {
         let UserData = await fetch(`/usersByName/${username}`)
         let UserDataJson = await UserData.json()
@@ -11,6 +12,7 @@ const fetchUserCredentials=async (username) =>{
     }
 }
 const getUserData=async(username)=>{
+
     try {
         let jsonData = await fetchUserCredentials(username)
         console.log(jsonData[0].username)
@@ -36,11 +38,14 @@ class Login {
             e.preventDefault();
             var error = 0;
             var count=0;
+  
+            console.log(validUsername)
             self.fields.forEach((field) => {
                 const input = document.querySelector(`#${field}`);
                 if (count==0){
-         
+                   
                     username=input.value;
+                    getUserData(username);
                 }
                 count++;
                 if (self.validateFields(input) == false) {
