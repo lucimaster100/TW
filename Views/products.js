@@ -11,7 +11,15 @@ function fetchProducts(){
             }else{
                 image=product.image
             }
-            return `<div class="card">
+            var type
+            if(!product.type)
+                type="Not Found"
+            else
+                type=product.type
+            return `
+            
+            <div class="column">
+            <div class="card">
                 <div class="card__side card__side--front">
                     <div class="card__details">
                         <img src="photos/damigeana4.png" alt="">
@@ -20,18 +28,18 @@ function fetchProducts(){
                 <div class="card__side card__side--back card__side--back">
                     <div class="card__cta">
                         <div class="cardBackText">
-                            <p class="cardText">Bottle</p>
+                            <p class="cardText">${type}</p>
                             <p class="cardText2">Owner :</p>
                             <p class="cardText3">Profile</p>
 
                         </div>
-
+                        </div>
                     </div>
                 </div>
             </div>`
         }).join('')
         console.log(html)
-        document.querySelector("#gallery").innerHTML = html
+        document.querySelector(".row").innerHTML = html
     }).catch(error =>{
         console.log(error)
     })

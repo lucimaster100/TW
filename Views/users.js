@@ -11,7 +11,9 @@ function fetchUsers(){
             }else{
                 image=user.image
             }
-            return `<div class="card">
+            return `
+            <div class="column">
+            <div class="card">
         <div class="card__side card__side--front">
           <div class="card__details">
             <img src="${image}" alt="">
@@ -24,13 +26,13 @@ function fetchUsers(){
               <a href="VisitProfile.html" class="buttonCard">Visit</a>
 
             </div>
-
+            </div>
           </div>
         </div>
       </div>`
         }).join('')
         console.log(html)
-        document.querySelector("#gallery").innerHTML = html
+        document.querySelector(".row").innerHTML = html
     }).catch(error =>{
         console.log(error)
     })

@@ -11,8 +11,6 @@
 
 }
 
-
-
 .container{
  max-width: 1300px;
     margin: auto;
@@ -48,18 +46,6 @@
 }
 
 
-#gallery {
-    margin-left: 4rem;
-    margin-right:4rem;
-    margin-top: 5rem;
-    line-height:0;
-    -webkit-column-count:5; /* split it into 5 columns */
-    -webkit-column-gap:5px; /* give it a 5px gap between columns */
-    -moz-column-count:5;
-    -moz-column-gap:5px;
-    column-count:5;
-    column-gap:5px;
-}
 
 
 
