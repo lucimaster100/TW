@@ -1,23 +1,25 @@
 let username="ana";
-
+let validUsername=0;
 const fetchUserCredentials=async (username) =>{
     try {
         let UserData = await fetch(`/usersByName/${username}`)
         let UserDataJson = await UserData.json()
+
         return UserDataJson
     }catch (err){
         console.log(err)
     }
 }
-const getUserData=async()=>{
+const getUserData=async(username)=>{
     try {
-        let jsonData = await fetchUserCredentials('username1')
-        console.log(jsonData[0])
+        let jsonData = await fetchUserCredentials(username)
         console.log(jsonData[0].username)
         console.log(jsonData[0].password)
+        
     }catch (err){
-        console.log(err)
+        
     }
+   
 }
 
 class Login {
@@ -54,8 +56,9 @@ class Login {
         })
     }
     validateFields(field) {
-        console.log(username);
-        getUserData()
+        console.log(validUsername);
+        getUserData(username);
+        console.log(validUsername);
         if (field.value.trim() == "") {
             this.setStatus(
                 field,
