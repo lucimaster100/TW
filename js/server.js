@@ -21,6 +21,10 @@ const server = http.createServer((req, res) => {
         const utilisation = req.url.split('/')[2]
         prodC.getProductbyUtilisation(req, res, utilisation)
     }
+    else if (req.url.match(/\/productsUserID\/([0-9]+)/) && req.method == 'GET') {
+        const utilisation = req.url.split('/')[2]
+        prodC.getProductbyUserID(req, res, utilisation)
+    }
     else if (req.url=='/productsPrice/ascending' && req.method == 'GET') {
         const price = req.url.split('/')[2]
         prodC.getProductbyPriceASC(req, res, price)

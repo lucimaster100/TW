@@ -39,7 +39,19 @@ function findByType(param) {
         })
     })
 }
-
+function findByUserID(param) {
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT * FROM products WHERE user_id = $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
 function findByPriceASC() {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products ORDER BY price ASC `, (err, res) => {
@@ -144,7 +156,7 @@ function remove(id) {
 module.exports = {
     findAllProducts,
     findProductById, findByLabel, findByOrigin, findByPriceASC, findByUtilisation,findByPriceDESC,
-    create,
+    create,findByUserID,
     update,
     remove,
     findByType

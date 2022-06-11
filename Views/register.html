@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/register.css">
 </head>
-<body>
-<form  id="myForm" method="post">
-    <label for="username">username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="email">email:</label><br>
-    <input type="email" id="email" name="email"required><br>
-    <label for="password">password:</label><br>
-    <input type="password" id="password" name="password"required><br>
-    <input type="submit" value="Register"><br>
+<body class="register">
+    <div class="container">
+        <div class="input-groupHead">
+        <h2 class="text-center"><b>Register</b></h2>
+    </div>
+    <br>
+<form  id="myForm" class="loginForm" method="post">
+    <div class="input-group">
+    <label for="username" class="label">Username</label>
+    <input type="text" id="username" name="username"required class="input"><br>
+    <span class="error-message"></span>
+
+    </div>
+    <br>
+    <div class="input-group">
+    <label for="email" class="label">Email</label><br>
+    <input type="email" id="email" name="email"required class="input"><br>
+    <span class="error-message"></span>
+    </div>
+    <br>
+    <div class="input-group">
+    <label for="password" class="label">Password</label><br>
+    <input type="password" id="password" name="password"required class="input"><br>
+    <span class="error-message"></span>
+</div>
+<div class="input-groupButton">
+    <input type="submit" value="Register" class="buttonInput">
+    <a href="login.html">
+        <button class="buttonInput" type="button">Login</button>
+        </a>
+</div>
 </form>
 </body>
 <script src="js/register.js"></script>
