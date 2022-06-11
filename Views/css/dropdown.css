@@ -5,7 +5,7 @@
     width: 50%;     
     padding: 10px;
     height: 100px;
-
+    z-index: 10;
 
 }
 
@@ -15,6 +15,7 @@
     -webkit-transition: .5s;
     transition: .5s;
     border-radius: 20%;
+    z-index: 10;
 }
 
 #main_nav li {
@@ -25,10 +26,12 @@
     list-style: none;
     -webkit-transition: .5s;
     transition: .5s;
+    z-index: 10;
 }
 
 #main_nav > ul > li > a, h1 {
     text-transform: uppercase;
+    z-index: 10;
 }
 
 #main_nav a {
@@ -36,7 +39,7 @@
     text-decoration: none;
     padding: 5px 15px;
     color: white;
-
+    z-index: 10;
 }
 
 #main_nav ul ul {
@@ -45,17 +48,18 @@
     top: 100%;
     visibility: hidden;
     opacity: 0;
-    
+    z-index: 10;
 }
 
 .disabled {
     pointer-events:none; 
-    opacity:0.6;         
+    opacity:0.6;   
+          
 }
 
 #main_nav ul ul ul {
     left: 100%;
-    
+    z-index: 10;
     top: 0;
 }
 

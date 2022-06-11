@@ -40,9 +40,9 @@ function findByType(param) {
     })
 }
 
-function findByPrice(param) {
+function findByPriceASC() {
     return new Promise((resolve, reject) => {
-        client.query(`SELECT * FROM products WHERE price = $1 `, [param], (err, res) => {
+        client.query(`SELECT * FROM products ORDER BY price ASC `, (err, res) => {
             if (!err) {
                 resolve(res.rows)
             } else {
@@ -51,7 +51,19 @@ function findByPrice(param) {
             }
             client.end;
         })
-        resolve(products)
+    })
+}
+function findByPriceDESC() {
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT * FROM products ORDER BY price DESC `, (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
     })
 }
 function findByOrigin(param) {
@@ -131,7 +143,7 @@ function remove(id) {
 }
 module.exports = {
     findAllProducts,
-    findProductById, findByLabel, findByOrigin, findByPrice, findByUtilisation,
+    findProductById, findByLabel, findByOrigin, findByPriceASC, findByUtilisation,findByPriceDESC,
     create,
     update,
     remove,

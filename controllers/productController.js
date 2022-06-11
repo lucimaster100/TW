@@ -80,9 +80,23 @@ async function getProductbyOrigin(req, res, origin) {
         console.log(error)
     }
 }
-async function getProductbyPrice(req, res, price) {
+async function getProductbyPriceASC(req, res) {
     try {
-        const product = await Product.findByPrice(price)
+        const product = await Product.findByPriceASC()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function getProductbyPriceDESC(req, res) {
+    try {
+        const product = await Product.findByPriceDESC()
         if (!product) {
             res.writeHead(404, { 'Content-Type': 'application/json' })
             res.end(JSON.stringify({ message: 'Product Not Found' }))
@@ -172,7 +186,7 @@ module.exports = {
     getProductbyType,
     getProductbyUtilisation,
     getProductbyOrigin,
-    getProductbyPrice,
+    getProductbyPriceASC,getProductbyPriceDESC,
     getProductbyLabel,
     createProduct,
     updateProduct,

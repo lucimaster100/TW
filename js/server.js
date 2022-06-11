@@ -21,9 +21,13 @@ const server = http.createServer((req, res) => {
         const utilisation = req.url.split('/')[2]
         prodC.getProductbyUtilisation(req, res, utilisation)
     }
-    else if (req.url.match(/\/productsPrice\/([0-9]+)/) && req.method == 'GET') {
+    else if (req.url=='/productsPrice/ascending' && req.method == 'GET') {
         const price = req.url.split('/')[2]
-        prodC.getProductbyPrice(req, res, price)
+        prodC.getProductbyPriceASC(req, res, price)
+    }
+    else if (req.url=='/productsPrice/descending' && req.method == 'GET') {
+        const price = req.url.split('/')[2]
+        prodC.getProductbyPriceDESC(req, res, price)
     }
     else if (req.url.match(/\/productsLabel\/([a-z]+)/) && req.method == 'GET') {
         const label = req.url.split('/')[2]

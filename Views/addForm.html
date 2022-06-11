@@ -98,9 +98,9 @@
             <label>Type</label>
             <select class="formID" name="Type" id="type">
               <option value="Unspecificated" selected>Select</option>
-              <option value="Plastic Bottle">Plastic Bottle</option>
-              <option value="Glass Bottle">Glass Bottle</option>
-              <option value="Aluminium Can">Aluminium Can</option>
+              <option value="PlasticBottle">Plastic Bottle</option>
+              <option value="GlassBottle">Glass Bottle</option>
+              <option value="AluminiumCan">Aluminium Can</option>
               <option value="Flask">Flask</option>
               <option value="Jug">Jug</option>
 
@@ -123,14 +123,20 @@
             <label>Utilisation Time </label>
             <select class="formID" name="Type" id="utilisation">
               <option value="Unspecificated" selected>Select</option>
-              <option value="Factory New">Factory New</option>
+              <option value="FactoryNew">Factory New</option>
               <option value="New">New</option>
-              <option value="Low Utilisation">Low Utilisation</option>
-              <option value="High Utilisation">High Utilisation</option>
-              <option value="Worn Off">Worn Off</option>
+              <option value="LowUtilisation">Low Utilisation</option>
+              <option value="HighUtilisation">High Utilisation</option>
+              <option value="WornOff">Worn Off</option>
               <option value="Unitilisable">Unitilisable</option>
 
             </select>
+          </div>
+          <div class="input-container">
+            <label class="chooseFile">Image URL
+
+            </label>
+            <input class="formID" type="text" name="Image" placeholder="Image" id="image" />
           </div>
           <div class="input-container">
             <label>Present Label
@@ -140,12 +146,7 @@
           </div>
 
 
-          <div class="input-container">
-            <label class="chooseFile">Image
-
-            </label>
-            <input class="formID" type="file" accept="image/*" id="image"/>
-          </div>
+          
 
           <div class="button-container">
             <button id="upload" class="btn btn-primary" type="submit">
@@ -158,5 +159,5 @@
 
   </div>
 </body>
-<script src="productPost.js"></script>
+<script src="js/productPost.js"></script>
 </html>

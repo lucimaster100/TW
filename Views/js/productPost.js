@@ -1,12 +1,13 @@
 const myForm= document.getElementById('productForm')
 myForm.addEventListener('submit',function(e){
     e.preventDefault()
+
     var title=document.getElementById('title').value
     var type=document.getElementById('type').value
     var price=document.getElementById('price').value
     var origin=document.getElementById('origin').value
     var utilisation=document.getElementById('utilisation').value
-    var label=document.getElementById('label').value
+    var label=document.querySelector('#label').checked
     var image=document.getElementById('image').value
     var user_id=localStorage.getItem('id')
     fetch('/products',{
