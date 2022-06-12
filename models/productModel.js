@@ -142,6 +142,12 @@ function findProductById(id) {
             }
             client.end;
         })
+        client.query(`UPDATE products SET views=views+1 where id=$1`,[id],(err, res) => {
+            if(err){
+                console.log(err)
+            }
+            client.end
+        })
     })
 }
 
