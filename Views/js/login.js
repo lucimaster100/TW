@@ -1,153 +1,121 @@
 let username = "";
-localStorage.removeItem("user")
-localStorage.removeItem("id")
-localStorage.removeItem("auth")
-let i = 100
 
-const fetchUserCredentials = async (username) => {
+localStorage.removeItem("user");
+localStorage.removeItem("id");
+localStorage.removeItem("auth");
 
+const fetchUserCredentials = (username) => {
+  return fetch(`/usersByName/${username}`)
+    .then((res) => res.json())
+    .then((UserDataJson) => {
+      if (UserDataJson.length === 0) {
+        return 0;
+      } else {
+        return UserDataJson;
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
-    try {
-        //Daca e gasit , vreau sa fac validUsername = 1 , daca nu , sa ramana 0
+  //    catch (err) {
+  //     console.log(err);
+  //   }
+};
+const getUserData = (username) => {
+  return fetchUserCredentials(username)
+    .then((jsonData) => {
+      return jsonData[0];
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 
-        let UserData = await fetch(`/usersByName/${username}`)
-        let UserDataJson = await UserData.json()
-        if (UserDataJson == 0) {
-          
-            return 0
-        }
-        else {
-            return UserDataJson
-        }
+function submitForm(form, fields) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    var error = 0;
+    var count = 0;
 
-    } catch (err) {
-        console.log(err)
-    }
+    const ValidatedFields = fields.map((field) => {
+      const input = document.querySelector(`#${field}`);
+
+      if (field === "username") {
+        username = input.value;
+      }
+
+      return validateFields(input);
+      //
+      //   }
+    });
+
+    Promise.all(ValidatedFields).then((res) => {
+      console.log(res);
+      if (res[0] && res[1]) {
+        localStorage.setItem("auth", 1);
+        form.submit();
+      }
+    });
+  });
 }
-const getUserData = async (username) => {
 
-    try {
+function validateFields(field) {
+  return getUserData(username).then((res) => {
+    if (!res) {
+      setStatus(field, `Wrong Username `, "error");
+      return false;
+    } else {
+      let { username, password, id } = res;
+      if (field.value.trim() == "") {
+        setStatus(
+          field,
+          `${field.previousElementSibling.innerText} cannot be blank `,
+          "error"
+        );
 
-        let jsonData = await fetchUserCredentials(username)
-        let user = jsonData[0].username
-        let pass = jsonData[0].password
-        let id = jsonData[0].id
-
- 
-        localStorage.setItem("user", user)
-        localStorage.setItem("id", id)
-    } catch (err) {
-
-
-    }
-
-}
-
-
-
-class Login {
-    constructor(form, fields) {
-        this.form = form;
-        this.fields = fields;
-        this.validateSubmit();
-    }
-
-    validateSubmit() {
-        
-        let self = this;
-        this.form.addEventListener('submit', (e) => {
-           
-            e.preventDefault();
-            var error = 0;
-            var count = 0;
-
-
-            self.fields.forEach((field) => {
-                const input = document.querySelector(`#${field}`);
-
-                if (count == 0) {
-                    username = input.value;
-                    
-                    getUserData(username)
-                }
-                if (count == 1) {
-                    username = input.value;
-                    
-                    getUserData(username)
-                }
-                count++;
-                if (self.validateFields(input) == false) {
-                    error++;
-                }
-
-            })
-          
-            if (error == 0) {
-                localStorage.setItem("auth", 1)
-                this.form.submit();
-            }else{
-                
-            }
-        })
-    }
-
-
-
-
-    validateFields(field) {
-
-
-        
-
-
-
-        if (field.value.trim() == "") {
-            this.setStatus(
-                field,
-                `${field.previousElementSibling.innerText} cannot be blank `,
-                "error"
+        return false;
+      } else {
+        if (field.type == "password") {
+          if (field.value != password) {
+            setStatus(
+              field,
+              `${field.previousElementSibling.innerText} is wrong `,
+              "error"
             );
-
             return false;
+          } else {
+            localStorage.setItem("id", id);
+            setStatus(field, null, "success");
+            return true;
+          }
+        } else {
+          setStatus(field, null, "success");
+          return true;
         }
-        else {
-            if (field.type == "password") {
-
-                if (field.value.length < 8) {
-                    this.setStatus(
-                        field,
-                        `${field.previousElementSibling.innerText} must be at least 8 characters long `,
-                        "error"
-                    );
-                    return false;
-                } else {
-                    this.setStatus(field, null, "success");
-                    return true;
-                }
-            } else {
-                this.setStatus(field, null, "success");
-                return true;
-            }
-        }
+      }
     }
-    setStatus(field, message, status) {
-        const errorMessage = field.parentElement.querySelector(".error-message");
-        if (status == "success") {
-            if (errorMessage) {
-                errorMessage.innerText = "";
-            }
-            field.classList.remove("input-error");
+  });
+}
 
-        }
-        if (status == "error") {
-            errorMessage.innerText = message;
-            field.classList.add("input-error")
-        }
+function setStatus(field, message, status) {
+  //  console.log("Set Status");
+  const errorMessage = field.parentElement.querySelector(".error-message");
+  if (status == "success") {
+    if (errorMessage) {
+      errorMessage.innerText = "";
     }
+    field.classList.remove("input-error");
+  }
+  if (status == "error") {
+    errorMessage.innerText = message;
+    field.classList.add("input-error");
+  }
 }
 
 const form = document.querySelector(".loginForm");
 if (form) {
-    const fields = ['username', 'password'];
-    const validator = new Login(form, fields);
+  const fields = ["username", "password"];
+
+  submitForm(form, fields);
 }
