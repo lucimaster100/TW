@@ -94,6 +94,20 @@ async function getProductbyUserID(req, res, id) {
         console.log(error)
     }
 }
+async function getProductbyUserIDExport(req, res, id) {
+    try {
+        const product = await Product.findByUserIDExport(id)
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 async function getProductbyPriceASC(req, res) {
     try {
         const product = await Product.findByPriceASC()
@@ -288,5 +302,6 @@ module.exports = {
     getProductbyLabel,countCask,countFlask,countGlassBottle,countJug,countPlasticBottle,countBarrel,
     createProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    getProductbyUserIDExport
 }
