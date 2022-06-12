@@ -95,8 +95,7 @@ function validateFields(field) {
             );
             return false;
           } else {
-            if (isAdmin) localStorage.setItem("admin", 1);
-            else localStorage.setItem("admin", 0);
+
             localStorage.setItem("id", id);
             setStatus(field, null, "success");
             return true;

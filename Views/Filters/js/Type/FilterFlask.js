@@ -7,7 +7,7 @@ function fetchProducts() {
         const html = data.map(product => {
             var image
             if (!product.image) {
-                image = 'photos/defaultImages/defaultProduct.png'
+                image = '../../../photos/defaultImages/defaultProduct.png'
             } else {
                 image = product.image
             }

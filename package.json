@@ -6,10 +6,12 @@
   "dependencies": {
     "fetch": "^1.1.0",
     "json2csv": "^5.0.7",
+    "jsonfeed-to-rss": "^3.0.5",
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
     "node-fetch": "^2.6.1",
     "pg": "^8.7.3",
+    "rss": "^1.2.2",
     "superagent": "^7.1.6",
     "uuid": "^8.3.2"
   },

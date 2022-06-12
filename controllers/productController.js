@@ -1,6 +1,6 @@
 const Product = require('../models/productModel')
 const { getPostData } = require('../utils')
-
+const fs=require('fs')
 async function getAllProducts(req, res) {
     try {
         const products = await Product.findAllProducts()

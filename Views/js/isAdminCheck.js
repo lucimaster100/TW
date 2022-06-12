@@ -1,12 +1,15 @@
 class AdminCheck {
   constructor() {
-    const admin = localStorage.getItem("admin");
-    this.validateAuth(admin);
+    const user_id = localStorage.getItem("id");
+    fetch(`/usersById/${user_id}`).then((response) => {
+      if (!response.ok) throw Error(ERROR);
+      return response.json();
+    }).then(data=>{
+      if (data[0].isAdmin == false) {
+        window.location.replace("/home.html");
+      }
+
+    })
   }
-  validateAuth(admin) {
-    if (admin != 1) {
-      window.location.replace("/home.html");
-    } else {
-    }
-  }
+
 }
