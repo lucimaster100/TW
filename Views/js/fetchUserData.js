@@ -7,6 +7,14 @@ function fetchUserProfile() {
     })
     .then((data) => {
       var image;
+      var description;
+
+      if (!data.description) {
+        description =
+          "Someone is extremly lazy and did not set up a description";
+      } else {
+        description = data.description;
+      }
 
       if (!data.img) {
         image = "photos/defaultImages/DefaultUser.jpg";
@@ -20,7 +28,7 @@ function fetchUserProfile() {
 
         <h2>${data.username} </h2>
         <div class="paragraphs">
-            <p>${data.description}</p>
+            <p>${description}</p>
         </div>`;
       document.querySelector(".profileSection").innerHTML = html;
     })
