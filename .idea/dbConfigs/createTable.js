@@ -1,34 +1,42 @@
-
-const { Client, Pool } = require('pg')
+const { Client, Pool } = require("pg");
 
 const client = new Client({
-    host: "localhost",
-    user: "postgres",
-    port: 5432,
-    password: 'postgres',
-    database: 'postgres'
-})
+  host: "localhost",
+  user: "postgres",
+  port: 5432,
+  password: "postgres",
+  database: "postgres",
+});
 
-
-
-
-const insertUser = async (title, type, price, origin, utilisation, label) => {
-    try {
-        await client.connect();           // gets connection
-        await client.query(
-            `INSERT INTO "products" ("title", "type","price", "origin","utilisation", "label")  
-             VALUES ($1, $2,$3,$4,$5,$6)`, [title, type, price, origin, utilisation, label]); // sends queries
-        return true;
-    } catch (error) {
-        console.error(error.stack);
-        return false;
-    } finally {
-        await client.end();               // closes connection
-    }
+const execute = async (query) => {
+  try {
+    await client.connect(); // gets connection
+    await client.query(query); // sends queries
+    return true;
+  } catch (error) {
+    console.error(error.stack);
+    return false;
+  } finally {
+    await client.end(); // closes connection
+  }
 };
 
-insertUser('Madagascar', 'Cask', '190', 'Germany', 'WornOff', '0').then(result => {
-    if (result) {
-        console.log('User inserted');
-    }
+const text = `
+    CREATE TABLE  "products" (
+	"id" SERIAL,
+    "title" text  NOT NULL,
+    "type" text  NOT NULL,
+    "price" numeric NOT NULL,
+    "origin" text  NOT NULL,
+    "utilisation" text NOT NULL,
+    "label" boolean NOT NULL,
+    "image" text NOT NULL,
+    "user_id" integer NOT NULL,
+    "views" integer DEFAULT 0
+    );`;
+
+execute(text).then((result) => {
+  if (result) {
+    console.log("Table created");
+  }
 });
