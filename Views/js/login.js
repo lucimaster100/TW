@@ -3,7 +3,8 @@ let username = "";
 localStorage.removeItem("user");
 localStorage.removeItem("id");
 localStorage.removeItem("auth");
-
+localStorage.removeItem("admin");
+localStorage.removeItem("product_id");
 const fetchUserCredentials = (username) => {
   return fetch(`/usersByName/${username}`)
     .then((res) => res.json())
@@ -66,7 +67,8 @@ function validateFields(field) {
       setStatus(field, `Wrong Username `, "error");
       return false;
     } else {
-      let { username, password, id } = res;
+      let { password, id, isAdmin } = res;
+
       if (field.value.trim() == "") {
         setStatus(
           field,
@@ -95,6 +97,8 @@ function validateFields(field) {
             );
             return false;
           } else {
+            if (isAdmin) localStorage.setItem("admin", 1);
+            else localStorage.setItem("admin", 0);
             localStorage.setItem("id", id);
             setStatus(field, null, "success");
             return true;

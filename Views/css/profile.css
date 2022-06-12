@@ -1,66 +1,70 @@
-
 .containerProfile {
-    width: 80%;
-    margin: 120px auto 120px;
-    background-color: #fff;
-    padding: 0 20px 20px;
-    border :1px solid grey;
-    border-radius: 60px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.075);
-    text-align: center;
-    height: 105vh;
+  width: 80%;
+  margin: 120px auto 120px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border: 1px solid grey;
+  border-radius: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.075);
+  text-align: center;
+  height: 120vh;
 }
 
 .avatar {
-    border-radius: 100px;
-    overflow: hidden;
-    height: 200px;
-    width: 200px;
-    position: relative;
-    margin: auto;
-    top: -60px;
-    box-shadow: 0 0 0 4px grey;
-
-
+  border-radius: 100px;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: auto;
+  top: -60px;
+  box-shadow: 0 0 0 4px grey;
 }
 .avatar img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 100px;
-    height: 200px;
-    width: 200px;
-
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
 }
 
-.paragraphs{
-    margin-bottom: 5rem;
+.paragraphs {
+  margin-bottom: 5rem;
+  height: 320px;
+  background-color: black;
+  border-radius: 8%;
 }
 h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 65px;
-    color: #333;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 65px;
+  color: #333;
 }
-
 
 p {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 20px;
-    color: black;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  color: silver;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
-.SelectItems{
-    font-size: 1.5VW;
-    padding: 0.5rem 0;
-    width: 30rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    background-color: black;
-    color: white;
+.SelectItems {
+  font-size: 1.5vw;
+  padding: 0.5rem 0;
+  width: 30rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  background-color: black;
+  color: white;
 
-    box-shadow: 10px 15px 50px black;
+  box-shadow: 10px 15px 50px black;
 }
 
+.buttonRow {
+}
