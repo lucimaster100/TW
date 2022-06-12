@@ -58,7 +58,6 @@ const server = http.createServer((req, res) => {
         userC.getUserById(req, res, id)
     } else if (req.url.match(/\/userProfileById\/([0-9]+)/) && req.method == 'GET') {
         const id = req.url.split('/')[2]
-        console.log(id)
         userC.getUserProfileById(req, res, id)
     } else if (req.url.match(/\/usersByName\/([a-zA-Z]+)/) && req.method == 'GET') {
         const name = req.url.split('/')[2]
