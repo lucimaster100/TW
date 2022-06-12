@@ -1,5 +1,5 @@
 function fetchProducts() {
-  fetch("/products")
+  fetch("/trending")
     .then((response) => {
       if (!response.ok) throw Error(ERROR);
       return response.json();
