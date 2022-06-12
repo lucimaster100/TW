@@ -52,6 +52,20 @@ async function getUserById(req, res, id) {
         console.log(error)
     }
 }
+async function getUserProfileById(req, res, id) {
+    try {
+        const user = await User.findUserProfileById(id)
+        if (!user[0]) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(user[0]))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 async function createUser(req, res) {
     try {
         const body = await getPostData(req)
@@ -117,5 +131,6 @@ module.exports = {
     updateUser,
     deleteUser,
     getUserByUsername,
-    getUserByEmail
+    getUserByEmail,
+    getUserProfileById
 }

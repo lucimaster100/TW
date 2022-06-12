@@ -40,6 +40,19 @@ function findUserById(id) {
         })
     })
 }
+function findUserProfileById(id) {
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT username,description,img FROM users WHERE id = $1 `, [id], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
 function findUserByUsername(username) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM users WHERE username = $1 `, [username], (err, res) => {
@@ -75,7 +88,6 @@ function create(user) {
     })
 }
 function update(id, user) {
-    console.log(user)
     return new Promise((resolve, reject) => {
         client.query(`UPDATE users SET username=$1,email=$2, password=$3,description=$4,img=$5,"isAdmin"=$6 WHERE $7=id`, [user.username, user.email, user.password,user.description,user.img,user.isAdmin ,id])
             .then(() => resolve({ message: 'Update successfull' }))
@@ -96,5 +108,6 @@ module.exports = {
     update,
     remove,
     findUserByUsername,
-    findUserByEmail
+    findUserByEmail,
+    findUserProfileById
 }

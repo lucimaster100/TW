@@ -10,6 +10,7 @@ myForm.addEventListener('submit',function(e){
     var label=document.querySelector('#label').checked
     var image=document.getElementById('image').value
     var user_id=localStorage.getItem('id')
+    console.log(user_id)
     fetch('/products',{
         method: 'POST',
         body: JSON.stringify({
