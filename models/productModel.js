@@ -131,6 +131,91 @@ function findProductById(id) {
         })
     })
 }
+
+function countCask() {
+    param="Cask"
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT COUNT (*) FROM products WHERE type =  $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
+function countPlasticBottle() {
+    param="PlasticBottle"
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT COUNT (*) FROM products WHERE type =  $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
+function countGlassBottle() {
+    param="GlassBottle"
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT COUNT (*) FROM products WHERE type =  $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
+function countFlask() {
+    param="Flask"
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT COUNT (*) FROM products WHERE type =  $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
+function countBarrel() {
+    param="Barrel"
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT COUNT (*) FROM products WHERE type =  $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
+function countJug() {
+    param="Jug"
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT COUNT (*) FROM products WHERE type =  $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
 function create(product) {
     return new Promise((resolve, reject) => {
         client.query(`INSERT INTO products( title,type, price,origin,utilisation,label,image,user_id) VALUES($1,$2,$3,$4,$5,$6,$7,$8)`, [product.title, product.type, product.price,product.origin,product.utilisation,product.label,product.image,product.user_id])
@@ -156,8 +241,8 @@ function remove(id) {
 module.exports = {
     findAllProducts,
     findProductById, findByLabel, findByOrigin, findByPriceASC, findByUtilisation,findByPriceDESC,
-    create,findByUserID,
+    create,findByUserID,countBarrel,countFlask,countGlassBottle,countJug,countPlasticBottle,
     update,
     remove,
-    findByType
+    findByType,countCask
 }

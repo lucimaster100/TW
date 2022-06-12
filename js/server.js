@@ -26,13 +26,30 @@ const server = http.createServer((req, res) => {
         prodC.getProductbyUserID(req, res, utilisation)
     }
     else if (req.url=='/productsPrice/ascending' && req.method == 'GET') {
-        const price = req.url.split('/')[2]
-        prodC.getProductbyPriceASC(req, res, price)
+        prodC.getProductbyPriceASC(req, res)
     }
     else if (req.url=='/productsPrice/descending' && req.method == 'GET') {
-        const price = req.url.split('/')[2]
-        prodC.getProductbyPriceDESC(req, res, price)
+        prodC.getProductbyPriceDESC(req, res)
     }
+    else if (req.url=='/countCask' && req.method == 'GET') {
+        prodC.countCask(req, res)
+    }
+    else if (req.url=='/countFlask' && req.method == 'GET') {
+        prodC.countFlask(req, res)
+    }
+    else if (req.url=='/countGlassBottle' && req.method == 'GET') {
+        prodC.countGlassBottle(req, res)
+    }
+    else if (req.url=='/countJug' && req.method == 'GET') {
+        prodC.countJug(req, res)
+    }
+    else if (req.url=='/countPlasticBottle' && req.method == 'GET') {
+        prodC.countPlasticBottle(req, res)
+    }
+    else if (req.url=='/countBarrel' && req.method == 'GET') {
+        prodC.countBarrel(req, res)
+    }
+    
     else if (req.url.match(/\/productsLabel\/([a-z]+)/) && req.method == 'GET') {
         const label = req.url.split('/')[2]
         prodC.getProductbyLabel(req, res, label)

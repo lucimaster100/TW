@@ -122,7 +122,90 @@ async function getProductbyPriceDESC(req, res) {
         console.log(error)
     }
 }
-
+async function countCask(req, res) {
+    try {
+        const product = await Product.countCask()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function countPlasticBottle(req, res) {
+    try {
+        const product = await Product.countPlasticBottle()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function countJug(req, res) {
+    try {
+        const product = await Product.countJug()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function countGlassBottle(req, res) {
+    try {
+        const product = await Product.countGlassBottle()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function countFlask(req, res) {
+    try {
+        const product = await Product.countFlask()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+async function countBarrel(req, res) {
+    try {
+        const product = await Product.countBarrel()
+        if (!product) {
+            res.writeHead(404, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ message: 'Product Not Found' }))
+        } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify(product))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 async function createProduct(req, res) {
     try {
         const body = await getPostData(req)
@@ -202,7 +285,7 @@ module.exports = {
     getProductbyUtilisation,
     getProductbyOrigin,
     getProductbyPriceASC,getProductbyPriceDESC,getProductbyUserID,
-    getProductbyLabel,
+    getProductbyLabel,countCask,countFlask,countGlassBottle,countJug,countPlasticBottle,countBarrel,
     createProduct,
     updateProduct,
     deleteProduct
