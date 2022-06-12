@@ -12,6 +12,8 @@ const server = http.createServer((req, res) => {
     if (req.url == '/products' && req.method == 'GET') {
         prodC.getAllProducts(req, res);
 
+    }else if(req.url == '/trending'&& req.method == 'GET'){
+        prodC.getTrending(req,res);
     }
     else if (req.url.match(/\/productsType\/([a-zA-Z]+)/) && req.method == 'GET') {
         const type = req.url.split('/')[2]

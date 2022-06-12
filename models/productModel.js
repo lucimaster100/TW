@@ -26,6 +26,19 @@ function findAllProducts() {
         })
     })
 }
+function findTrending(){
+    return new Promise((resolve,reject)=>{
+        client.query(`SELECT * FROM products ORDER BY views DESC LIMIT 10`,(err,res)=>{
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
 function findByType(param) {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products WHERE type = $1 `, [param], (err, res) => {
@@ -265,6 +278,7 @@ module.exports = {
     remove,
     findByType,
     findByType,
-    findByUserIDExport
+    findByUserIDExport,
+    findTrending
 
 }
