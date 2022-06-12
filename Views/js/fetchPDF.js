@@ -20,4 +20,4 @@ function fetchProductsPDF(){
         doc.save("Products.pdf")
     })
 }
-fetchProductsPDF()
+

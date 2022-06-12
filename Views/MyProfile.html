@@ -105,8 +105,17 @@
         <button onclick="location.href = 'addForm.html';" class="buttonProfile">
           Add Item
         </button>
+        <button onclick="fetchProductsCSV()" class="buttonProfile">
+          Export CSV
+        </button>
+        <button onclick="fetchProductsPDF()" class="buttonProfile">
+          Export PDF
+        </button>
       </div>
     </div>
   </body>
   <script src="js/fetchUserData.js"></script>
+  <script src="js/fetchCSV.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js"></script>
+  <script src="./js/fetchPDF.js"></script>
 </html>
