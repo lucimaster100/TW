@@ -1,70 +1,58 @@
-
-
-
-
 :root {
-    background-image: url("bgImage.jpg");
+  background-image: url("bgImage.jpg");
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto Light", "Roboto Light", serif;
+  box-sizing: border-box;
+  margin: 0;
 
+  padding: 0;
+  font-family: "Roboto Light", "Roboto Light", serif;
 }
-
 
 input[type="text"],
 input[type="password"],
 input[type="number"],
 input[type="email"] {
-    width: 20%;
-    height: 25px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-
+  width: 20%;
+  height: 25px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
-
 .container {
-   
-    margin-left: 30%;
-    justify-content: center;
-
-    height: 100vh;
+  margin-left: 36%;
+  justify-content: center;
+  margin-top: 10%;
+  height: 100vh;
 }
 
 .adminSection {
-    padding-bottom: 6vh;
+  padding-bottom: 6vh;
 }
 
 .adminLabel {
+  height: 25px;
 
-    height: 25px;
-
-    color: black;
-    font-size: 20px;
-    padding-right: 10px;
-
+  color: black;
+  font-size: 20px;
+  padding-right: 10px;
 }
 
 .adminButton {
-    height: 25px;
-    width: 75px;
-    background-color: black;
-    color: silver;
-
+  height: 25px;
+  width: 75px;
+  background-color: black;
+  color: silver;
 }
 
 .adminButton:hover {
-    height: 25px;
-    width: 75px;
-    background-color: white;
-    color: black;
-
+  height: 25px;
+  width: 75px;
+  background-color: white;
+  color: black;
 }
 
 .adminButton:active {
-    background-color: gray;
+  background-color: gray;
 }
