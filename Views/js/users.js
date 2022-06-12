@@ -31,7 +31,6 @@ function fetchUsers(){
         </div>
       </div>`
         }).join('')
-        console.log(html)
         document.querySelector(".row").innerHTML = html
     }).catch(error =>{
         console.log(error)
