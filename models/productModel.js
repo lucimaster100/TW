@@ -52,6 +52,19 @@ function findByUserID(param) {
         })
     })
 }
+function findByUserIDExport(param) {
+    return new Promise((resolve, reject) => {
+        client.query(`SELECT title,type,price,origin,utilisation,label FROM products WHERE user_id = $1 `, [param], (err, res) => {
+            if (!err) {
+                resolve(res.rows)
+            } else {
+                console.log(err.message);
+                reject(err)
+            }
+            client.end;
+        })
+    })
+}
 function findByPriceASC() {
     return new Promise((resolve, reject) => {
         client.query(`SELECT * FROM products ORDER BY price ASC `, (err, res) => {
@@ -244,5 +257,8 @@ module.exports = {
     create,findByUserID,countBarrel,countFlask,countGlassBottle,countJug,countPlasticBottle,
     update,
     remove,
-    findByType,countCask
+    findByType,
+    findByType,
+    findByUserIDExport
+
 }
