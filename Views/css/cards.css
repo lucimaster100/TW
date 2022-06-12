@@ -88,9 +88,9 @@
   font-weight: bold;
 }
 .cardText {
-  font-size: 1.4rem;
-
-  padding-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-bottom: 0.6rem;
 }
 
 .buttonCard {
