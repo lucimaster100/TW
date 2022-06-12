@@ -69,6 +69,7 @@ function fetchProducts() {
                             <p class="cardText">Origin : ${origin}</p>
                             <p class="cardText">State : ${utilisation}</p>
                             <p class="cardText">${label}</p>
+                            <a  href="productPage.html" onclick="localStorage.setItem('product_id',${product.id})">Visit</a>
                         </div>
                         </div>
                     </div>
