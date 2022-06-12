@@ -1,19 +1,22 @@
+const a = "myniceandonlypassword";
+const b = "encryptionkeythatnobodywilleverguess%$##";
 
-const pg = require('pg');
-const client = new pg.Client({
-    host: "localhost",
-    user: "postgres",
-    port: 5432,
-    password: 'postgres',
-    database: 'postgres'
-})
-client.connect();
+let s = "";
 
+// use the longer of the two words to calculate the length of the result
+for (let i = 0; i < Math.max(a.length, b.length); i++) {
+  // append the result of the char from the code-point that results from
+  // XORing the char codes (or 0 if one string is too short)
+  s += String.fromCharCode((a.charCodeAt(i) || 0) ^ (b.charCodeAt(i) || 0));
+}
+console.log(s);
 
-email="email2";
-console.log(email)
+let y = "";
 
- client.query("SELECT * from users where email=$1",[email], (err, res) => {
-   console.log(err, res.rows);
-   client.end();
- });
+// use the longer of the two words to calculate the length of the result
+for (let i = 0; i < Math.max(y.length, a.length); i++) {
+  // append the result of the char from the code-point that results from
+  // XORing the char codes (or 0 if one string is too short)
+  y += String.fromCharCode((y.charCodeAt(i) || 0) ^ (a.charCodeAt(i) || 0));
+}
+console.log(y);
