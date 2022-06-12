@@ -18,7 +18,7 @@ function fetchUserProfile() {
 
         </div>
 
-        <h2>My Profile </h2>
+        <h2>${data.username} </h2>
         <div class="paragraphs">
             <p>${data.description}</p>
         </div>`;
