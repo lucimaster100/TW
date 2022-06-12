@@ -26,8 +26,8 @@ const server = http.createServer((req, res) => {
         prodC.getProductbyUserID(req, res, utilisation)
     }
     else if (req.url.match(/\/productsUserIDExport\/([0-9]+)/) && req.method == 'GET') {
-        const utilisation = req.url.split('/')[2]
-        prodC.getProductbyUserIDExport(req, res, utilisation)
+        const id = req.url.split('/')[2]
+        prodC.getProductbyUserIDExport(req, res, id)
     }
     else if (req.url=='/productsPrice/ascending' && req.method == 'GET') {
         prodC.getProductbyPriceASC(req, res)

@@ -35,10 +35,7 @@ function fetchProductsCSV() {
             throw Error(ERROR)
         return response.json()
     }).then(data => {
-        aux={"title":"title","type" : "type","price" :"price","origin":"origin","utilisation":"utilisation","label":"label"}
-        aux.push(data)
-        console.log(aux)
-        csv=ConvertToCSV(aux)
+        csv=ConvertToCSV(data)
         var name='products'
         download(name +'.csv',csv)
     }).catch(error => {
