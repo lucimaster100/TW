@@ -3,8 +3,6 @@ function crypt(password) {
   let key =
     "t6w9z$C&F)J@NcRfUjXn2r4u7x!A%D*G-KaPdSgVkYp3s6v8y/B?E(H+MbQeThWmZq4t7w!z$C&F)J@NcRfUjXn2r5u8x/A?D*G-KaPdSgVkYp3s6v9y$B&E)H+MbQeT";
   for (let i = 0; i < Math.min(password.length, key.length); i++) {
-    // append the result of the char from the code-point that results from
-    // XORing the char codes (or 0 if one string is too short)
     encPassword += String.fromCharCode(
       (password.charCodeAt(i) || 0) ^ (key.charCodeAt(i) || 0)
     );
