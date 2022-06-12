@@ -23,7 +23,7 @@ function fetchUsers(){
           <div class="card__cta">
             <div class="cardBackText">
               <p class="cardText">${user.username}</p>
-              <a href="VisitProfile.html" class="buttonCard">Visit</a>
+              <a  href="VisitProfile.html" class="buttonCard disabled-link">Visit</a>
 
             </div>
             </div>
