@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="css/register.css">
-</head>
+    <link rel="stylesheet" href="css/register.css" />
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/init.js"></script>
+  </head>
 
-<body class="register">
+  <body class="register">
     <div class="container">
-        <div class="input-groupHead">
-            <h2 class="text-center"><b>Register</b></h2>
+      <div class="input-groupHead">
+        <h2 class="text-center"><b>Register</b></h2>
+      </div>
+      <br />
+      <form id="myForm" class="loginForm" method="post">
+        <div class="input-group">
+          <label for="username" class="label">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            class="input"
+          /><br />
+          <span class="error-message"></span>
         </div>
-        <br>
-        <form id="myForm" class="loginForm" method="post">
-            <div class="input-group">
-                <label for="username" class="label">Username</label>
-                <input type="text" id="username" name="username" required class="input"><br>
-                <span class="error-message"></span>
+        <br />
+        <div class="input-group">
+          <label for="email" class="label">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="input"
+          /><br />
+          <span class="error-message"></span>
+        </div>
+        <br />
+        <div class="input-group">
+          <label for="password" class="label">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="input"
+          /><br />
+          <span class="error-message"></span>
+        </div>
+        <div class="input-groupButton">
+          <input type="submit" value="Register" class="buttonInput" />
 
-            </div>
-            <br>
-            <div class="input-group">
-                <label for="email" class="label">Email</label><br>
-                <input type="email" id="email" name="email" required class="input"><br>
-                <span class="error-message"></span>
-            </div>
-            <br>
-            <div class="input-group">
-                <label for="password" class="label">Password</label><br>
-                <input type="password" id="password" name="password" required class="input"><br>
-                <span class="error-message"></span>
-            </div>
-            <div class="input-groupButton">
-                <input type="submit" value="Register" class="buttonInput">
-              
-                    <button  onclick="location.href = 'login.html';" class="buttonInput" type="button">Login</button>
-               
-            </div>
-        </form>
-</div>
-        <script src="js/register.js"></script>
-
-</body>
-
-
+          <button
+            onclick="location.href = 'login.html';"
+            class="buttonInput"
+            type="button"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="js/register.js"></script>
+  </body>
 </html>

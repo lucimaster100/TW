@@ -1,151 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Admin</title>
-
-    <link rel="stylesheet" href =css/admin.css> <link rel="stylesheet" href
-    =css/dropdown.css>
-    <script defer src="js/auth.js"></script>
-    <script defer src="js/init.js"></script>
-  </head>
-  <body>
-    <div class="main">
-      <nav id="main_nav">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+  
+  <link rel="stylesheet" href =css/admin.css>
+  <link rel="stylesheet" href =css/dropdown.css>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/init.js"></script>
+</head>
+<body>
+<div class="main">
+  <nav id="main_nav">
+    <ul>
+     
+     
+    
+      <li><a href="#" class="menuitem logout">Log Out</a></li>
+      <li><a href="Home.html" class="menuitem">Home</a></li>
+      <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
+      <li><a href="MyProfile.html" class="menuitem">My Profile</a></li>
+      <li class="disabled">
+        <a href="">Filter</a>
         <ul>
-          <li><a href="#" class="menuitem logout">Log Out</a></li>
-          <li><a href="Home.html" class="menuitem">Home</a></li>
-          <li><a href="Profiles.html" class="menuitem">Profiles</a></li>
-          <li><a href="MyProfile.html" class="menuitem">My Profile</a></li>
-          <li class="disabled">
-            <a href="">Filter</a>
+          <li>
+          
+            <a href="">Type</a>
             <ul>
-              <li>
-                <a href="">Type</a>
-                <ul>
-                  <li><a href="">Plastic Bottle</a></li>
-                  <li><a href="">Glass Bottle</a></li>
-                  <li><a href="">Plastic Bottle</a></li>
-                  <li><a href="">Aluminium Can</a></li>
-                  <li><a href="">Flask</a></li>
-                  <li><a href="">Jug</a></li>
-                  <li><a href="">Cask</a></li>
-                  <li><a href="">Barrel</a></li>
-                </ul>
-              </li>
+              <li><a href="">Plastic Bottle</a></li>
+              <li><a href="">Glass Bottle</a></li>
+              <li><a href="">Plastic Bottle</a></li>
+              <li><a href="">Aluminium Can</a></li>
+              <li><a href="">Flask</a></li>
+              <li><a href="">Jug</a></li>
+              <li><a href="">Cask</a></li>
+              <li><a href="">Barrel</a></li>
+            </ul>
+          </li>
 
-              <li>
-                <a href="">Price</a>
-                <ul>
-                  <li><a href="">Lower than 10</a></li>
-                  <li><a href="">Lower than 50</a></li>
-                  <li><a href="">Lower than 100</a></li>
-                  <li><a href="">Lower than 500</a></li>
-                  <li><a href="">Lower than 1000</a></li>
-                  <li><a href="">Lower than 5000</a></li>
-                </ul>
-              </li>
 
-              <li>
-                <a href="">Utilisation</a>
-                <ul>
-                  <li><a href="">Factory New</a></li>
-                  <li><a href="">New</a></li>
-                  <li><a href="">Low Utilisation</a></li>
-                  <li><a href="">High Utilisation</a></li>
-                  <li><a href="">Worn Off</a></li>
-                  <li><a href="">Unitilisable</a></li>
-                </ul>
-              </li>
+          <li>
+            <a href="">Price</a>
+            <ul>
+              <li><a href="">Lower than 10</a></li>
+              <li><a href="">Lower than 50</a></li>
+              <li><a href="">Lower than 100</a></li>
+              <li><a href="">Lower than 500</a></li>
+              <li><a href="">Lower than 1000</a></li>
+              <li><a href="">Lower than 5000</a></li>
+            </ul>
+          </li>
 
-              <li>
-                <a href="">Origin</a>
-                <ul>
-                  <li><a href="">Romania</a></li>
-                  <li><a href="">Germany</a></li>
-                  <li><a href="">France</a></li>
-                </ul>
-              </li>
+          <li>
+           
+            <a href="">Utilisation</a>
+            <ul>
+              <li><a href="">Factory New</a></li>
+              <li><a href="">New</a></li>
+              <li><a href="">Low Utilisation</a></li>
+              <li><a href="">High Utilisation</a></li>
+              <li><a href="">Worn Off</a></li>
+              <li><a href="">Unitilisable</a></li>
+            </ul>
+          </li>
 
-              <li>
-                <a href="">Label</a>
-                <ul>
-                  <li><a href="">Yes</a></li>
-                  <li><a href="">No</a></li>
-                </ul>
-              </li>
+          <li>
+            <a href="">Origin</a>
+            <ul>
+              <li><a href="">Romania</a></li>
+              <li><a href="">Germany</a></li>
+              <li><a href="">France</a></li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="">Label</a>
+            <ul>
+              <li><a href="">Yes</a></li>
+              <li><a href="">No</a></li>
             </ul>
           </li>
         </ul>
-      </nav>
-      <div class="container">
-        <div class="adminSection">
-          <label class="adminLabel">Delete User By ID</label>
-          <input
-            class="adminInput"
-            type="number"
-            name="DeleteUserByID"
-            placeholder="User ID"
-          />
-          <button class="adminButton" type="submit">Delete</button>
-        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
 
-        <div class="adminSection">
-          <label class="adminLabel">Delete User By Email</label>
-          <input
-            class="adminInput"
-            type="email"
-            name="DeleteUserByEmail"
-            placeholder="User Email"
-          />
-          <button class="adminButton" type="submit">Delete</button>
-        </div>
-
-        <div class="adminSection">
-          <label class="adminLabel">Delete Photo by ID</label>
-          <input
-            class="adminInput"
-            type="number"
-            name="DeletePhotoByID"
-            placeholder="Photo ID"
-          />
-          <button class="adminButton" type="submit">Delete</button>
-        </div>
-
-        <div class="adminSection">
-          <label class="adminLabel">Change user pass by ID</label>
-          <input
-            class="adminInput"
-            type="number"
-            name="ChangePassID"
-            placeholder="User ID"
-          />
-          <input
-            class="adminInput"
-            type="password"
-            name="ChangePassNewPass"
-            placeholder="New Pass"
-          />
-          <button class="adminButton" type="submit">Change</button>
-        </div>
-
-        <div class="adminSection">
-          <label class="adminLabel">Change user pass by Email</label>
-          <input
-            class="adminInput"
-            type="email"
-            name="ChangePassEmail"
-            placeholder="User Email"
-          />
-          <input
-            class="adminInput"
-            type="password"
-            name="ChangePassNewPass"
-            placeholder="New Pass"
-          />
-          <button class="adminButton" type="submit">Change</button>
-        </div>
-      </div>
+    <div class="adminSection">
+        <label class="adminLabel">Delete User By ID</label>
+        <input class="adminInput" type="number" id="user_id" name="user_id" placeholder="User ID">
+        <button class="adminButton" onclick="deleteUserByID()">
+            Delete
+          </button>
     </div>
-  </body>
+
+    <div class="adminSection">
+        <label class="adminLabel">Delete Item by ID</label>
+        <input class="adminInput" type="number" id="product_id" name="product_id" placeholder="Item ID">
+        <button class="adminButton" onclick="deleteProductByID()">
+            Delete
+          </button>
+    </div>
+
+</div>
+</div>
+
+</body>
+<script src="js/deleteProduct.js"></script>
+<script src="js/deleteUser.js"></script>
 </html>
