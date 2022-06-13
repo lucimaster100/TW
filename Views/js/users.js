@@ -1,17 +1,20 @@
-function fetchUsers(){
-    fetch('/users').then(response =>{
-        if(!response.ok)
-            throw Error(ERROR)
-        return response.json()
-    }).then(data =>{
-        const html=data.map(user =>{
-            var image
-            if(!user.image){
-                image='photos/defaultImages/DefaultUser.jpg'
-            }else{
-                image=user.image
-            }
-            return `
+function fetchUsers() {
+  fetch("/users")
+    .then((response) => {
+      if (!response.ok) throw Error(ERROR);
+      return response.json();
+    })
+    .then((data) => {
+      const html = data
+        .map((user) => {
+          var image;
+
+          if (!user.img) {
+            image = "photos/defaultImages/DefaultUser.jpg";
+          } else {
+            image = user.img;
+          }
+          return `
             <div class="column">
             <div class="card">
         <div class="card__side card__side--front">
@@ -29,12 +32,14 @@ function fetchUsers(){
             </div>
           </div>
         </div>
-      </div>`
-        }).join('')
-        document.querySelector(".row").innerHTML = html
-    }).catch(error =>{
-        console.log(error)
+      </div>`;
+        })
+        .join("");
+      document.querySelector(".row").innerHTML = html;
     })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 fetchUsers();
